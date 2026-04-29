@@ -1,0 +1,134 @@
+# ==============================================
+# skill_config.yaml - AI自动化编程 Skill 配置文件
+# 适配《AI编程技能规范文档V4.0_整合版》
+# 可由阶段0自动生成，也可手动填写
+# ==============================================
+
+# ──────────────────────────────────────────
+# 一、项目信息
+# ──────────────────────────────────────────
+project:
+  name: "{{项目名称}}"                    # 例："企业数据字典管理系统"
+  description: "{{项目描述}}"             # 例："实现数据字典类型和字典项的增删改查"
+  version: "1.0.0"                        # 项目版本号
+  module_prefix: "{{模块前缀}}"           # 例："dict"，用于生成类名
+
+# ──────────────────────────────────────────
+# 二、技术栈配置
+# ──────────────────────────────────────────
+tech_stack:
+  backend: "Spring Boot 3.0 + MyBatis-Plus 3.5 + Java 17"
+  frontend: "Vue3 + Element Plus 2.x"    # 如无前端，设为 ""
+  database: "MySQL 8.0"
+  cache: "Redis 7.0"                     # 如无缓存，设为 ""
+  message_queue: ""                      # 如无MQ，设为 ""
+  build_tool: "Maven"                    # Maven / Gradle
+
+# ──────────────────────────────────────────
+# 三、编码规范
+# ──────────────────────────────────────────
+coding_standard: "阿里巴巴Java开发规范"   # 阿里巴巴Java开发规范 / Google Java Style
+
+# ──────────────────────────────────────────
+# 四、测试要求
+# ──────────────────────────────────────────
+test_requirements:
+  line_coverage: 80         # 行覆盖率（%），最低要求
+  branch_coverage: 70       # 分支覆盖率（%），最低要求
+  method_coverage: 100      # 方法覆盖率（%），公共方法100%
+
+# ──────────────────────────────────────────
+# 五、人工复核配置
+# ──────────────────────────────────────────
+manual_confirm:
+  interval: 50              # 每N个任务设置1个阶段性复核节点，0=不自动添加
+  notify_channel: "console" # console / wecom_webhook / dingtalk / email
+  notify_url: ""            # 企微/钉钉Webhook地址（console时留空）
+  timeout: 0                # 等待人工确认超时（秒），0=不超时永久等待
+
+# ──────────────────────────────────────────
+# 六、执行规则
+# ──────────────────────────────────────────
+exec_rules:
+  exec_mode: "serial"       # serial=严格串行（安全）/ parallel=智能并行（快速）
+  max_retry: 3              # 单个任务最大重试次数
+  parallel_max: 3           # 并行模式下最大并行任务数（parallel模式时生效）
+  auto_continue: true       # 任务失败后是否自动重试（false=停止等待人工处理）
+
+# ──────────────────────────────────────────
+# 七、质量管控
+# ──────────────────────────────────────────
+quality_control:
+  self_review_enable: true      # 启用AI自我审查（每个任务完成后）
+  p0_debt_block: true           # P0技术债务阻塞执行（发现P0债务必须修复后才能继续）
+  test_coverage_block: true     # 测试覆盖率不达标时阻塞执行
+  review_checklist: "references/review_checklists.md"  # 审查清单文件路径
+
+# ──────────────────────────────────────────
+# 八、上下文管理
+# ──────────────────────────────────────────
+context_manage:
+  auto_anchor: true         # 每个阶段完成时自动锚定文档版本
+  deviation_check: true     # 每10个任务自动检查执行偏差
+  deviation_threshold: 10   # 偏差检查间隔（任务数）
+  dynamic_compress: true    # 上下文窗口接近限制时自动压缩
+  core_context_dir: "01_context_core"  # 核心上下文目录
+
+# ──────────────────────────────────────────
+# 九、断点续跑
+# ──────────────────────────────────────────
+breakpoint_continue:
+  enable: true              # 启用断点续跑
+  auto_save: true           # 每个任务完成后自动保存状态
+  state_dir: "05_state_backup"  # 状态备份目录
+  backup_count: 10          # 保留最近N个状态备份
+
+# ──────────────────────────────────────────
+# 十、项目路径配置（相对于Skill目录的上层项目根目录）
+# ──────────────────────────────────────────
+paths:
+  # 以下路径相对于 Skill所在目录 的上层（项目根目录）
+  java_source: "../../src/main/java/com/{{company}}/{{project}}/"
+  java_test: "../../src/test/java/com/{{company}}/{{project}}/"
+  resources: "../../src/main/resources/"
+  frontend_source: "../../src/main/webapp/"    # Vue项目路径，如无前端留空
+  # AI生成代码的输出路径（可与源码路径相同）
+  output_source: "../../src/main/java/com/{{company}}/{{project}}/"
+
+# ──────────────────────────────────────────
+# 十一、AI工具配置（可选）
+# ──────────────────────────────────────────
+ai_tool:
+  type: "claude"            # claude / kimi / gpt / trae（使用的AI工具类型，仅用于记录）
+  model: "claude-sonnet-4"  # 使用的模型名称
+  # 多模型协作（可选，不同阶段使用不同模型）
+  multi_model:
+    enable: false
+    mapping:
+      需求分析: "claude-sonnet-4"
+      架构设计: "claude-sonnet-4"
+      编码实现: "claude-sonnet-4"
+      代码审查: "claude-sonnet-4"
+
+# ──────────────────────────────────────────
+# 十二、外部系统集成（阶段0自动生成，可手动修改）
+# ──────────────────────────────────────────
+external_integrations:
+  database:
+    enabled: true
+    mock: false             # true=使用模拟配置，false=使用真实配置
+    dev:
+      url: "jdbc:mysql://{{host}}:3306/{{dbname}}?useUnicode=true&characterEncoding=utf8"
+      username: "{{username}}"
+      password: "{{password}}"
+    sit:
+      url: ""
+      username: ""
+      password: ""
+  redis:
+    enabled: false          # 是否集成Redis
+    host: "127.0.0.1"
+    port: 6379
+    password: ""
+    database: 0
+  third_party: []           # 第三方服务集成列表（阶段0填充）

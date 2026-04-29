@@ -1,0 +1,256 @@
+# ==============================================
+# exec_index.yaml - 原子执行计划索引文件
+# 由阶段3（任务拆分）自动生成，由各脚本维护
+# 格式版本：V4.0
+# ==============================================
+
+meta:
+  project: "{{项目名称}}"
+  version: "1.0.0"
+  created_at: "{{YYYY-MM-DD HH:mm:ss}}"
+  last_updated: "{{YYYY-MM-DD HH:mm:ss}}"
+  total_tasks: 0        # 总任务数（自动统计）
+  completed: 0          # 已完成（自动统计）
+  in_progress: 0        # 进行中（自动统计）
+  pending: 0            # 待执行（自动统计）
+  blocked: 0            # 已阻塞（自动统计）
+  document_versions:
+    requirement: "v1.0.0"   # 锚定的需求文档版本
+    architecture: "v1.0.0"  # 锚定的设计文档版本
+    detail_design: "v1.0.0" # 锚定的详细设计版本
+
+# ==============================================
+# tasks - 所有原子任务
+# 状态流转：PENDING → IN_PROGRESS → DONE
+#                  ↓               ↑
+#              BLOCKED ─────────── (修复后)
+#              PENDING_HUMAN → DONE（人工确认后）
+#              SKIPPED（跳过执行，不计入完成数）
+# ==============================================
+tasks:
+
+  # ──────────────────────────────────────────
+  # 阶段1：需求分析
+  # ──────────────────────────────────────────
+  - id: "T1001"
+    name: "需求理解与摘要"
+    stage: "requirement"
+    phase: 1
+    status: "PENDING"
+    ai_role: "需求分析专家"
+    depends_on: []                    # 依赖的任务ID列表
+    estimated_minutes: 15
+    actual_minutes: ~                 # 实际耗时（完成后填写）
+    prompt_ref: "prompt_library.md#需求分析Prompt"   # 参考Prompt位置
+    acceptance_criteria:              # 验收标准（完成后逐项检查）
+      - "生成需求理解摘要文件"
+      - "识别所有核心功能模块"
+      - "识别用户角色（至少2个角色）"
+    deliverable: ""                   # 交付物路径（完成后填写）
+    completed_at: ~
+    issues: []                        # 发现的问题（已修复）
+
+  - id: "T1002"
+    name: "功能模块拆分"
+    stage: "requirement"
+    phase: 1
+    status: "PENDING"
+    ai_role: "需求分析专家"
+    depends_on: ["T1001"]
+    estimated_minutes: 20
+    actual_minutes: ~
+    acceptance_criteria:
+      - "功能模块列表完整，符合MECE原则"
+      - "每个模块有明确的功能边界"
+      - "模块间依赖关系已梳理"
+    deliverable: ""
+    completed_at: ~
+    issues: []
+
+  - id: "T1010"
+    name: "场景穷举（正常+异常+边界）"
+    stage: "requirement"
+    phase: 1
+    status: "PENDING"
+    ai_role: "需求分析专家"
+    depends_on: ["T1002"]
+    estimated_minutes: 25
+    actual_minutes: ~
+    acceptance_criteria:
+      - "每个用户故事有正常场景至少1个"
+      - "每个用户故事有异常场景至少2个"
+      - "关键流程有边界场景"
+    deliverable: ""
+    completed_at: ~
+    issues: []
+
+  - id: "T1020"
+    name: "数据字典定义"
+    stage: "requirement"
+    phase: 1
+    status: "PENDING"
+    ai_role: "需求分析专家"
+    depends_on: ["T1002"]
+    estimated_minutes: 20
+    actual_minutes: ~
+    acceptance_criteria:
+      - "所有实体已定义"
+      - "每个字段包含：名称/类型/长度/必填/说明"
+      - "实体间关系已描述"
+    deliverable: ""
+    completed_at: ~
+    issues: []
+
+  - id: "T1030"
+    name: "编写需求规格说明书"
+    stage: "requirement"
+    phase: 1
+    status: "PENDING"
+    ai_role: "需求分析专家"
+    depends_on: ["T1010", "T1020"]
+    estimated_minutes: 30
+    actual_minutes: ~
+    acceptance_criteria:
+      - "文档结构完整（概述/业务流程/功能需求/数据字典/场景清单/非功能需求）"
+      - "每个用户故事有Given-When-Then验收标准"
+      - "非功能需求有量化指标"
+    deliverable: "02_exec_plans/01_requirement/需求规格说明书.md"
+    completed_at: ~
+    issues: []
+
+  - id: "T1040"
+    name: "需求自我审查"
+    stage: "requirement"
+    phase: 1
+    status: "PENDING"
+    ai_role: "代码审查员"       # 切换为审查员角色
+    depends_on: ["T1030"]
+    estimated_minutes: 15
+    actual_minutes: ~
+    acceptance_criteria:
+      - "需求审查清单全部通过（references/review_checklists.md）"
+      - "无遗漏的异常场景"
+      - "无模糊描述"
+    deliverable: "02_exec_plans/01_requirement/需求审查报告.md"
+    completed_at: ~
+    issues: []
+
+  # ──────────────────────────────────────────
+  # 阶段2：设计
+  # ──────────────────────────────────────────
+  - id: "T2001"
+    name: "系统架构设计"
+    stage: "architecture"
+    phase: 2
+    status: "PENDING"
+    ai_role: "架构设计专家"
+    depends_on: ["T1040"]
+    estimated_minutes: 20
+    actual_minutes: ~
+    acceptance_criteria:
+      - "分层架构设计完整（Controller/Service/Mapper）"
+      - "模块划分与需求匹配"
+      - "模块间依赖方向正确"
+    deliverable: ""
+    completed_at: ~
+    issues: []
+
+  - id: "T2010"
+    name: "数据库设计（含建表SQL）"
+    stage: "architecture"
+    phase: 2
+    status: "PENDING"
+    ai_role: "架构设计专家"
+    depends_on: ["T2001"]
+    estimated_minutes: 30
+    actual_minutes: ~
+    acceptance_criteria:
+      - "表结构与数据字典完全对应"
+      - "每张表包含通用字段（id/create_time/update_time/is_deleted）"
+      - "索引设计完整（外键/频繁查询字段）"
+      - "建表SQL语法正确，可直接执行"
+    deliverable: "02_exec_plans/02_architecture/建表SQL.sql"
+    completed_at: ~
+    issues: []
+
+  - id: "T2020"
+    name: "接口设计"
+    stage: "architecture"
+    phase: 2
+    status: "PENDING"
+    ai_role: "架构设计专家"
+    depends_on: ["T2001"]
+    estimated_minutes: 25
+    actual_minutes: ~
+    acceptance_criteria:
+      - "所有接口路径符合RESTful规范"
+      - "请求/响应格式完整定义"
+      - "错误码体系完整"
+      - "分页接口包含total字段"
+    deliverable: "02_exec_plans/02_architecture/接口设计.md"
+    completed_at: ~
+    issues: []
+
+  - id: "T2030"
+    name: "详细设计（核心方法伪代码）"
+    stage: "architecture"
+    phase: 2
+    status: "PENDING"
+    ai_role: "详细设计专家"
+    depends_on: ["T2010", "T2020"]
+    estimated_minutes: 40
+    actual_minutes: ~
+    acceptance_criteria:
+      - "每个核心方法都有伪代码"
+      - "伪代码覆盖正常和所有异常分支"
+      - "事务边界明确标注"
+    deliverable: "02_exec_plans/02_architecture/详细设计.md"
+    completed_at: ~
+    issues: []
+
+  # ──────────────────────────────────────────
+  # 阶段3：任务拆分
+  # （由AI在执行阶段3时动态生成并追加到此文件）
+  # ──────────────────────────────────────────
+
+  # ──────────────────────────────────────────
+  # 阶段4：编码实现（示例）
+  # （AI在任务拆分阶段自动生成，以下为格式示例）
+  # ──────────────────────────────────────────
+  - id: "T4001"
+    name: "实现Entity类：DictType"
+    stage: "coding"
+    phase: 4
+    status: "PENDING"
+    ai_role: "高级开发工程师"
+    depends_on: ["T2010"]
+    estimated_minutes: 10
+    actual_minutes: ~
+    acceptance_criteria:
+      - "字段与数据库表完全对应"
+      - "包含@TableName/@TableId/@TableLogic注解"
+      - "所有字段有@ApiModelProperty注释（Swagger）"
+    deliverable: ""   # 例：src/main/java/.../entity/DictType.java
+    test_file: ""
+    coverage: ""
+    completed_at: ~
+    issues: []
+
+  # ──────────────────────────────────────────
+  # 人工复核节点示例（每50个任务一个）
+  # ──────────────────────────────────────────
+  - id: "T_REVIEW_01"
+    name: "人工复核节点1：阶段4编码-第一批（T4001~T4050）"
+    stage: "coding"
+    phase: 4
+    status: "PENDING_HUMAN"         # 人工复核节点固定使用此状态
+    manual: true
+    depends_on: ["T4050"]           # 依赖第50个任务
+    estimated_minutes: 30
+    acceptance_criteria:
+      - "用户确认交付物质量符合预期"
+      - "无未处理的P0阻塞问题"
+    deliverable: "04_logs/review_report_T_REVIEW_01.md"
+    confirm_command: "python scripts/ai_auto_dev.py --confirm T_REVIEW_01 --pass"
+    completed_at: ~
+    issues: []

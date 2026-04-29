@@ -1,0 +1,106 @@
+# ==============================================
+# AI自动化编程 Skill 配置文件
+# 适配《AI编程技能规范文档V4.0_整合版》
+# ==============================================
+
+# --------------------------
+# 一、项目信息配置
+# --------------------------
+project:
+  name: "企业级数据字典管理系统"
+  description: "实现数据字典类型和字典项的增删改查功能"
+  version: "1.0.0"
+
+# --------------------------
+# 二、技术栈配置
+# --------------------------
+tech_stack:
+  backend: "Spring Boot 3.0 + MyBatis-Plus + MySQL 8.0 + Java 17"
+  frontend: "Vue3 + Element Plus"
+  build_tool: "Maven"
+
+# --------------------------
+# 三、编码规范配置
+# --------------------------
+coding_standard: "阿里巴巴Java开发规范"
+
+# --------------------------
+# 四、测试要求配置
+# --------------------------
+test_requirements:
+  line_coverage: 80
+  branch_coverage: 70
+  method_coverage: 100
+
+# --------------------------
+# 五、人工复核配置
+# --------------------------
+manual_confirm:
+  interval: 50  # 每N个任务设置1个阶段性复核节点，0=不自动添加
+  notify_channel: "wecom_webhook"  # wecom_webhook/dingtalk/email
+  notify_url: "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxx"
+  timeout: 0  # 人工确认超时时间（秒），0=不超时
+
+# --------------------------
+# 六、执行规则配置
+# --------------------------
+exec_rules:
+  exec_mode: "parallel"  # serial=严格串行，parallel=智能并行
+  run_mode: "daemon"  # daemon=守护进程，foreground=前台
+  max_retry: 3  # 全局最大重试次数
+  parallel_max: 5  # 最大并行任务数
+  block_size: 100  # 分块大小
+
+# --------------------------
+# 七、质量管控配置
+# --------------------------
+quality_control:
+  self_review_enable: true  # 启用自我审查
+  cross_review_enable: true  # 启用交叉审查
+  block_issue_block: true  # 阻塞问题拦截
+  p0_debt_block: true  # P0债务拦截
+  test_coverage_block: true  # 测试覆盖率拦截
+  min_test_coverage: 80  # 最小测试覆盖率
+
+# --------------------------
+# 八、上下文管理配置
+# --------------------------
+context_manage:
+  auto_anchor: true  # 自动上下文锚定
+  deviation_check: true  # 偏差自动校验
+  dynamic_compress: true  # 动态上下文压缩
+  compress_rate: 70  # 压缩率
+
+# --------------------------
+# 九、断点续跑配置
+# --------------------------
+breakpoint_continue:
+  enable: true
+  auto_continue: true
+  flush_interval: 10  # 状态持久化间隔（秒）
+  encrypted_backup: true  # 加密备份
+
+# --------------------------
+# 十、AI工具配置
+# --------------------------
+ai_tool:
+  type: "trae"  # kimi/claude/trae
+  model: "claude-3-5-sonnet-20240620"
+  # 多模型协作配置
+  multi_model:
+    enable: true
+    mapping:
+      需求分析: "claude-3-5-sonnet-20240620"
+      架构设计: "gpt-4o"
+      详细设计: "claude-3-5-sonnet-20240620"
+      编码实现: "claude-3-5-sonnet-20240620"
+      代码审查: "gpt-4o"
+
+# --------------------------
+# 十一、项目路径配置（相对于Skill目录）
+# --------------------------
+paths:
+  java_source: "../../src/main/java/com/aiguibin/platform/arch/"
+  frontend_source: "../../src/main/webapp/"
+  resources: "../../src/main/resources/"
+  static: "../../src/main/resources/static/"

@@ -1,0 +1,512 @@
+# ==============================================
+# exec_index.yaml - 原子执行计划索引文件
+# 由阶段4（任务拆分）+ AI生成，由脚本维护
+# 格式版本：V4.0
+#
+# 任务粒度：
+#   Stage0 原子任务：10-20分钟（文档分析专用）
+#   其他阶段任务：   2-8小时（120-480分钟）
+#
+# 任务ID命名规则：T{阶段号}{3位序号}
+#   阶段1(需求分析) → T1001, T1002...
+#   阶段2(概要设计) → T2001, T2002...
+#   阶段3(详细设计) → T3001, T3002...
+#   阶段4(任务拆分) → T4001, T4002...
+#   阶段5(编码实现) → T5001, T5002...
+#   阶段6(测试)     → T6001, T6002...
+#   人工复核节点    → T_REVIEW_01, T_REVIEW_02...
+# ==============================================
+
+meta:
+  project: "{{项目名称}}"
+  version: "1.0.0"
+  created_at: "{{YYYY-MM-DD HH:mm:ss}}"
+  last_updated: "{{YYYY-MM-DD HH:mm:ss}}"
+  total_tasks: 0        # 总任务数（脚本自动统计）
+  completed: 0          # 已完成（脚本自动统计）
+  in_progress: 0        # 进行中（脚本自动统计）
+  pending: 0            # 待执行（脚本自动统计）
+  blocked: 0            # 已阻塞（脚本自动统计）
+  document_versions:
+    requirement: "v1.0.0"     # 锚定的需求文档版本
+    architecture: "v1.0.0"    # 锚定的概要设计版本
+    detail_design: "v1.0.0"   # 锚定的详细设计版本
+
+# ==============================================
+# 状态流转：PENDING → IN_PROGRESS → DONE
+#           PENDING → BLOCKED（发现P0问题）
+#           PENDING_HUMAN → DONE（人工确认后）
+# ==============================================
+tasks:
+
+  # ──────────────────────────────────────────
+  # 阶段1：需求分析（粒度 2-8 小时）
+  # ──────────────────────────────────────────
+  - id: "T1001"
+    name: "需求理解与摘要"
+    stage: "requirement"
+    phase: 1
+    status: "PENDING"
+    ai_role: "需求分析专家"
+    depends_on: []
+    estimated_minutes: 120        # 2小时：阅读原始需求，输出理解摘要
+    actual_minutes: ~
+    acceptance_criteria:
+      - "输出需求理解摘要文件"
+      - "识别所有核心功能模块（至少2个）"
+      - "识别用户角色（至少2类用户）"
+      - "识别业务背景和核心目标"
+    deliverable: ""
+    completed_at: ~
+    issues: []
+
+  - id: "T1002"
+    name: "需求拆分（功能模块→用户故事）"
+    stage: "requirement"
+    phase: 1
+    status: "PENDING"
+    ai_role: "需求分析专家"
+    depends_on: ["T1001"]
+    estimated_minutes: 180        # 3小时：MECE拆分到用户故事级别
+    actual_minutes: ~
+    acceptance_criteria:
+      - "功能模块列表完整，符合MECE原则（无重叠无遗漏）"
+      - "每个功能模块已拆分为用户故事（粒度：1-3天可完成）"
+      - "每个用户故事有明确的用户角色"
+    deliverable: ""
+    completed_at: ~
+    issues: []
+
+  - id: "T1003"
+    name: "场景穷举（5类场景矩阵）"
+    stage: "requirement"
+    phase: 1
+    status: "PENDING"
+    ai_role: "需求分析专家"
+    depends_on: ["T1002"]
+    estimated_minutes: 240        # 4小时：穷举正常/异常/边界/权限/状态场景
+    actual_minutes: ~
+    acceptance_criteria:
+      - "每个用户故事有正常场景至少1个"
+      - "每个用户故事有异常场景至少2个"
+      - "关键功能有边界场景测试"
+      - "涉及权限的功能有权限场景"
+    deliverable: ""
+    completed_at: ~
+    issues: []
+
+  - id: "T1004"
+    name: "数据字典定义"
+    stage: "requirement"
+    phase: 1
+    status: "PENDING"
+    ai_role: "需求分析专家"
+    depends_on: ["T1002"]
+    estimated_minutes: 180        # 3小时：定义所有实体和字段
+    actual_minutes: ~
+    acceptance_criteria:
+      - "所有数据实体已识别和定义"
+      - "每个字段有：名称/类型/长度/必填/说明"
+      - "实体间关系已描述（1对1/1对多/多对多）"
+    deliverable: ""
+    completed_at: ~
+    issues: []
+
+  - id: "T1005"
+    name: "编写需求规格说明书"
+    stage: "requirement"
+    phase: 1
+    status: "PENDING"
+    ai_role: "需求分析专家"
+    depends_on: ["T1003", "T1004"]
+    estimated_minutes: 240        # 4小时：按模板编写完整需求文档
+    actual_minutes: ~
+    acceptance_criteria:
+      - "文档结构完整（概述/业务流程/功能需求/数据字典/场景清单/非功能需求）"
+      - "每个用户故事有Given-When-Then验收标准"
+      - "非功能需求有量化指标（如：响应时间<2s，并发>100）"
+    deliverable: "02_exec_plans/01_requirement/需求规格说明书_v1.0.0.md"
+    completed_at: ~
+    issues: []
+
+  - id: "T1006"
+    name: "需求自我审查"
+    stage: "requirement"
+    phase: 1
+    status: "PENDING"
+    ai_role: "代码审查员"
+    depends_on: ["T1005"]
+    estimated_minutes: 120        # 2小时：对照审查清单1逐项检查
+    actual_minutes: ~
+    acceptance_criteria:
+      - "references/review_checklists.md 审查清单1 全部通过"
+      - "无遗漏的异常场景"
+      - "无模糊描述（所有验收标准可量化）"
+    deliverable: "02_exec_plans/01_requirement/需求审查报告_v1.0.0.md"
+    completed_at: ~
+    issues: []
+
+  # ──────────────────────────────────────────
+  # 阶段2：概要设计（粒度 2-8 小时）
+  # ──────────────────────────────────────────
+  - id: "T2001"
+    name: "系统架构设计"
+    stage: "architecture"
+    phase: 2
+    status: "PENDING"
+    ai_role: "架构设计专家"
+    depends_on: ["T1006"]
+    estimated_minutes: 180
+    actual_minutes: ~
+    acceptance_criteria:
+      - "分层架构设计完整（Controller/Service/Mapper/Entity）"
+      - "模块划分与需求功能模块匹配"
+      - "模块间依赖方向正确，无反向依赖"
+    deliverable: ""
+    completed_at: ~
+    issues: []
+
+  - id: "T2002"
+    name: "数据库设计与建表SQL"
+    stage: "architecture"
+    phase: 2
+    status: "PENDING"
+    ai_role: "架构设计专家"
+    depends_on: ["T2001"]
+    estimated_minutes: 240
+    actual_minutes: ~
+    acceptance_criteria:
+      - "表结构与数据字典完全对应"
+      - "每张表含通用字段（id/create_time/update_time/is_deleted/create_by/update_by）"
+      - "外键关联字段和频繁查询字段已建索引"
+      - "建表SQL语法正确，可直接在目标数据库执行"
+      - "所有表和字段有注释（COMMENT）"
+    deliverable: "02_exec_plans/02_architecture/建表SQL_v1.0.0.sql"
+    completed_at: ~
+    issues: []
+
+  - id: "T2003"
+    name: "接口设计"
+    stage: "architecture"
+    phase: 2
+    status: "PENDING"
+    ai_role: "架构设计专家"
+    depends_on: ["T2001"]
+    estimated_minutes: 240
+    actual_minutes: ~
+    acceptance_criteria:
+      - "所有接口路径符合RESTful规范（名词复数，无动词）"
+      - "每个接口有完整的请求/响应定义"
+      - "错误码体系完整定义"
+      - "分页接口包含total字段"
+    deliverable: "02_exec_plans/02_architecture/接口设计_v1.0.0.md"
+    completed_at: ~
+    issues: []
+
+  - id: "T2004"
+    name: "概要设计自我审查"
+    stage: "architecture"
+    phase: 2
+    status: "PENDING"
+    ai_role: "代码审查员"
+    depends_on: ["T2002", "T2003"]
+    estimated_minutes: 120
+    actual_minutes: ~
+    acceptance_criteria:
+      - "references/review_checklists.md 审查清单2 全部通过"
+    deliverable: "02_exec_plans/02_architecture/概要设计_v1.0.0.md"
+    completed_at: ~
+    issues: []
+
+  # ──────────────────────────────────────────
+  # 阶段3：详细设计（粒度 2-8 小时）
+  # ──────────────────────────────────────────
+  - id: "T3001"
+    name: "详细设计 - 核心方法伪代码"
+    stage: "detail_design"
+    phase: 3
+    status: "PENDING"
+    ai_role: "详细设计专家"
+    depends_on: ["T2004"]
+    estimated_minutes: 360        # 6小时：为所有核心方法写伪代码
+    actual_minutes: ~
+    acceptance_criteria:
+      - "每个核心方法有完整伪代码"
+      - "伪代码覆盖正常分支和所有异常分支"
+      - "事务边界明确标注"
+      - "每种异常都有错误码定义"
+    deliverable: "02_exec_plans/03_detailed_design/详细设计文档_v1.0.0.md"
+    completed_at: ~
+    issues: []
+
+  - id: "T3002"
+    name: "详细设计自我审查"
+    stage: "detail_design"
+    phase: 3
+    status: "PENDING"
+    ai_role: "代码审查员"
+    depends_on: ["T3001"]
+    estimated_minutes: 120
+    actual_minutes: ~
+    acceptance_criteria:
+      - "references/review_checklists.md 审查清单3 全部通过"
+    deliverable: ""
+    completed_at: ~
+    issues: []
+
+  # ──────────────────────────────────────────
+  # 阶段4：任务拆分
+  # ──────────────────────────────────────────
+  - id: "T4001"
+    name: "生成编码阶段原子执行计划"
+    stage: "task_split"
+    phase: 4
+    status: "PENDING"
+    ai_role: "开发专家"
+    depends_on: ["T3002"]
+    estimated_minutes: 240        # 4小时：将详细设计拆分为2-8小时的原子任务
+    actual_minutes: ~
+    acceptance_criteria:
+      - "每个原子任务粒度为2-8小时（120-480分钟）"
+      - "每个任务有明确的验收标准"
+      - "任务依赖关系正确（依赖层次与分层架构一致：Entity→Mapper→Service→Controller）"
+      - "每50个任务设置1个人工复核节点"
+    deliverable: "exec_index.yaml（已追加T5xxx编码任务）"
+    completed_at: ~
+    issues: []
+
+  # ──────────────────────────────────────────
+  # 阶段5：编码实现（示例格式，AI动态生成T5xxx任务追加至此）
+  # ──────────────────────────────────────────
+  - id: "T5001"
+    name: "建库建表 - 执行建表SQL"
+    stage: "coding"
+    phase: 5
+    status: "PENDING"
+    ai_role: "高级开发工程师"
+    depends_on: ["T4001"]
+    estimated_minutes: 30         # 30分钟：执行SQL，验证表结构
+    actual_minutes: ~
+    acceptance_criteria:
+      - "在开发环境数据库执行建表SQL，执行无报错"
+      - "表结构与 02_exec_plans/02_architecture/建表SQL_v1.0.0.sql 完全一致"
+    deliverable: "02_exec_plans/02_architecture/建表SQL_v1.0.0.sql（已执行）"
+    completed_at: ~
+    issues: []
+
+  - id: "T5002"
+    name: "实现 Entity 类（每个表对应一个Entity）"
+    stage: "coding"
+    phase: 5
+    status: "PENDING"
+    ai_role: "高级开发工程师"
+    depends_on: ["T5001"]
+    estimated_minutes: 120        # 2小时：多个Entity类 + 单元测试（基本字段校验）
+    actual_minutes: ~
+    acceptance_criteria:
+      - "所有Entity字段与数据库表完全对应"
+      - "含@TableName/@TableId/@TableLogic等MyBatis-Plus注解"
+      - "含@ApiModelProperty注释（Swagger文档）"
+    deliverable: ""   # 填写：src/main/java/.../entity/XxxEntity.java
+    test_file: ""
+    coverage: ""
+    completed_at: ~
+    issues: []
+
+  # ──────────────────────────────────────────
+  # 人工复核节点（示例：在T5049之后，T5050之前）
+  # 注意：depends_on 必须依赖实际存在的任务！
+  # 用 exec_index_auto_gen.py --add-review T5049 自动生成
+  # ──────────────────────────────────────────
+  # - id: "T_REVIEW_01"
+  #   name: "人工复核节点1：阶段5编码-第一批（T5001~T5049）"
+  #   stage: "coding"
+  #   phase: 5
+  #   status: "PENDING_HUMAN"
+  #   manual: true
+  #   depends_on: ["T5049"]     # ← 必须是实际存在的任务ID！
+  #   estimated_minutes: 60
+  #   acceptance_criteria:
+  #     - "用户确认本轮交付物质量符合预期"
+  #     - "无未处理的P0阻塞问题"
+  #   deliverable: "04_logs/review_report_T_REVIEW_01.md"
+  #   confirm_command: "python scripts/ai_auto_dev.py --confirm T_REVIEW_01 --pass"
+  #   completed_at: ~
+  #   issues: []
+
+  # ──────────────────────────────────────────
+  # 阶段6：测试
+  # ──────────────────────────────────────────
+  - id: "T6001"
+    name: "生成接口测试脚本（curl）"
+    stage: "testing"
+    phase: 6
+    status: "PENDING"
+    ai_role: "测试工程师"
+    depends_on: ["T5002"]    # 依赖最后一个编码任务，实际使用时修改为正确ID
+    estimated_minutes: 240
+    actual_minutes: ~
+    acceptance_criteria:
+      - "每个接口有curl测试脚本"
+      - "覆盖正常场景+异常场景+边界场景"
+      - "脚本可在终端直接执行"
+    deliverable: "03_delivery/api_test_scripts.sh"
+    completed_at: ~
+    issues: []
+
+  - id: "T6002"
+    name: "执行接口测试并生成测试报告"
+    stage: "testing"
+    phase: 6
+    status: "PENDING"
+    ai_role: "测试工程师"
+    depends_on: ["T6001"]
+    estimated_minutes: 180
+    actual_minutes: ~
+    acceptance_criteria:
+      - "所有接口测试用例执行通过"
+      - "测试报告包含：用例数/通过数/失败数/失败原因分析"
+    deliverable: "03_delivery/测试报告_v1.0.0.md"
+    completed_at: ~
+    issues: []
+
+  # ──────────────────────────────────────────
+  # 阶段5：编码实现（完整格式示例，AI在阶段4生成）
+  # T5xxx = 阶段5编码任务
+  # ──────────────────────────────────────────
+  - id: "T5001"
+    name: "实现 DictType Entity 实体类"
+    stage: "coding"
+    phase: 5
+    status: "PENDING"
+    ai_role: "高级开发工程师"
+    depends_on: ["T4001"]            # 依赖任务拆分阶段的对应任务
+    estimated_minutes: 20
+    actual_minutes: ~
+    acceptance_criteria:
+      - "字段与 00_stage0_output/建表SQL.sql 中的 dict_type 表完全对应"
+      - "包含 @TableName/@TableId/@TableLogic/@Data 注解"
+      - "所有字段有 @ApiModelProperty 注释（Swagger文档）"
+      - "通用字段（id/createTime/updateTime/isDeleted）已通过 BaseEntity 继承"
+    deliverable: ""                   # 完成后填写：src/main/java/.../entity/DictType.java
+    test_file: ""                     # 此任务无需单元测试（纯POJO）
+    coverage: "N/A"
+    completed_at: ~
+    issues: []
+
+  - id: "T5010"
+    name: "实现 DictTypeMapper 接口"
+    stage: "coding"
+    phase: 5
+    status: "PENDING"
+    ai_role: "高级开发工程师"
+    depends_on: ["T5001"]
+    estimated_minutes: 15
+    actual_minutes: ~
+    acceptance_criteria:
+      - "继承 BaseMapper<DictType>"
+      - "自定义查询方法使用 @Select 或 XML 方式（不混用）"
+    deliverable: ""                   # src/main/java/.../mapper/DictTypeMapper.java
+    test_file: ""
+    coverage: "N/A"
+    completed_at: ~
+    issues: []
+
+  - id: "T5020"
+    name: "实现 DictTypeService 接口 + DictTypeServiceImpl"
+    stage: "coding"
+    phase: 5
+    status: "PENDING"
+    ai_role: "高级开发工程师"
+    depends_on: ["T5010"]
+    estimated_minutes: 45
+    actual_minutes: ~
+    acceptance_criteria:
+      - "接口方法签名与详细设计文档一致"
+      - "所有 public 方法有 JavaDoc 注释"
+      - "写操作有 @Transactional 注解"
+      - "日志记录完整（关键操作INFO，异常ERROR）"
+      - "行覆盖率 ≥ 80%，分支覆盖率 ≥ 70%，方法覆盖率 100%"
+    deliverable: ""                   # src/main/.../service/impl/DictTypeServiceImpl.java
+    test_file: ""                     # src/test/.../DictTypeServiceImplTest.java
+    coverage: ""                      # 完成后填写：行: 85%, 分支: 73%, 方法: 100%
+    completed_at: ~
+    issues: []
+
+  - id: "T5030"
+    name: "实现 DictTypeController"
+    stage: "coding"
+    phase: 5
+    status: "PENDING"
+    ai_role: "高级开发工程师"
+    depends_on: ["T5020"]
+    estimated_minutes: 25
+    actual_minutes: ~
+    acceptance_criteria:
+      - "接口路径符合 RESTful 规范（/api/dict-types）"
+      - "所有接口有 @Operation 注解（Swagger）"
+      - "参数使用 @Valid 注解"
+      - "Controller 层不含任何业务逻辑"
+    deliverable: ""                   # src/main/.../controller/DictTypeController.java
+    test_file: ""                     # src/test/.../DictTypeControllerTest.java
+    coverage: ""
+    completed_at: ~
+    issues: []
+
+  # ──────────────────────────────────────────
+  # 阶段6：接口测试（T6xxx）
+  # ──────────────────────────────────────────
+  - id: "T6001"
+    name: "生成 DictType 接口测试用例"
+    stage: "testing"
+    phase: 6
+    status: "PENDING"
+    ai_role: "测试工程师"
+    depends_on: ["T5030"]
+    estimated_minutes: 20
+    actual_minutes: ~
+    acceptance_criteria:
+      - "每个接口端点至少：1个正常场景 + 3个异常场景 + 边界场景"
+      - "测试用例文档包含：场景描述/请求/预期响应码/预期响应字段"
+    deliverable: ""                   # 03_delivery/test_cases_dict_type.md
+    completed_at: ~
+    issues: []
+
+  - id: "T6002"
+    name: "编写并执行 DictType curl 测试脚本"
+    stage: "testing"
+    phase: 6
+    status: "PENDING"
+    ai_role: "测试工程师"
+    depends_on: ["T6001"]
+    estimated_minutes: 25
+    actual_minutes: ~
+    acceptance_criteria:
+      - "Shell 脚本可直接执行（无语法错误）"
+      - "所有正常场景通过（code=0）"
+      - "所有异常场景通过（返回正确错误码）"
+      - "生成测试报告"
+    deliverable: ""                   # 03_delivery/test_scripts/test_dict_type.sh + test_report.md
+    completed_at: ~
+    issues: []
+
+  # ──────────────────────────────────────────
+  # 阶段7：文档归档（T7xxx）
+  # ──────────────────────────────────────────
+  - id: "T7001"
+    name: "归档所有文档，生成最终交付清单"
+    stage: "archive"
+    phase: 7
+    status: "PENDING"
+    ai_role: "文档管理员"
+    depends_on: ["T6002"]
+    estimated_minutes: 20
+    actual_minutes: ~
+    acceptance_criteria:
+      - "所有文档已归档到 03_delivery/，目录结构清晰"
+      - "每份文档有定版标记：[已定版 v1.0.0] {日期}"
+      - "最终交付清单（delivery_manifest.md）已生成，包含所有文件路径和版本号"
+      - "exec_index.yaml 整体状态已更新为 COMPLETED"
+    deliverable: ""                   # 03_delivery/delivery_manifest.md
+    completed_at: ~
+    issues: []
