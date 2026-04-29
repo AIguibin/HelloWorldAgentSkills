@@ -1,0 +1,43 @@
+CREATE TABLE `sys_dict_type` (
+  `uuid` varchar(32) NOT NULL COMMENT 'UUID，32位随机字符串',
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `dict_type_code` varchar(50) NOT NULL COMMENT '字典类型编码',
+  `dict_type_name` varchar(100) NOT NULL COMMENT '字典类型名称',
+  `description` varchar(255) DEFAULT NULL COMMENT '描述',
+  `sort_order` int DEFAULT '100' COMMENT '排序',
+  `status` tinyint DEFAULT '1' COMMENT '状态：1-启用 0-禁用',
+  `created_by` varchar(20) NOT NULL COMMENT '创建人用户编号',
+  `created_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `updated_by` varchar(20) DEFAULT NULL COMMENT '更新人用户编号',
+  `updated_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `is_deleted` tinyint DEFAULT '0' COMMENT '是否删除：0-否，1-是',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_uuid` (`uuid`),
+  UNIQUE KEY `uk_dict_type_code` (`dict_type_code`),
+  KEY `idx_status` (`status`),
+  KEY `idx_is_deleted` (`is_deleted`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='字典类型表';
+
+CREATE TABLE `sys_dict_item` (
+  `uuid` varchar(32) NOT NULL COMMENT 'UUID，32位随机字符串',
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `dict_type_code` varchar(50) NOT NULL COMMENT '字典类型编码',
+  `dict_value` varchar(50) NOT NULL COMMENT '字典值',
+  `dict_label` varchar(100) NOT NULL COMMENT '字典标签',
+  `group_code` varchar(50) DEFAULT NULL COMMENT '分组编码',
+  `group_name` varchar(100) DEFAULT NULL COMMENT '分组名称',
+  `sort_order` int DEFAULT '100' COMMENT '排序',
+  `status` tinyint DEFAULT '1' COMMENT '状态：1-启用 0-禁用',
+  `created_by` varchar(20) NOT NULL COMMENT '创建人用户编号',
+  `created_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `updated_by` varchar(20) DEFAULT NULL COMMENT '更新人用户编号',
+  `updated_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `is_deleted` tinyint DEFAULT '0' COMMENT '是否删除：0-否，1-是',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_uuid` (`uuid`),
+  KEY `idx_dict_type_code` (`dict_type_code`),
+  KEY `idx_group_code` (`group_code`),
+  KEY `idx_dict_value` (`dict_value`),
+  KEY `idx_status` (`status`),
+  KEY `idx_is_deleted` (`is_deleted`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='字典项表';

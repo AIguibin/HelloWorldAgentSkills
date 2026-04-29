@@ -1,0 +1,44 @@
+# 主配置文件
+spring:
+  application:
+    name: aiguibin-platform-arch
+  profiles:
+    active: dev
+  main:
+    allow-bean-definition-overriding: true
+
+# 服务器配置
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  compression:
+    enabled: true
+
+# 日志配置
+logging:
+  level:
+    root: INFO
+    com.aiguibin.platform: DEBUG
+    com.baomidou.dynamic: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/platform-arch.log
+
+# 应用配置
+platform:
+  # 文件上传配置
+  upload:
+    max-file-size: 100MB
+    max-request-size: 100MB
+    temp-dir: ${java.io.tmpdir}/platform-upload
+  # 文档输出配置
+  output:
+    dir: ${user.home}/platform-output
+
+# Knife4j配置
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn

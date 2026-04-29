@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aiguibin.platform.mapper.SysRoleMapper">
+    
+    <resultMap id="BaseResultMap" type="com.aiguibin.platform.entity.SysRole">
+        <id column="id" property="id"/>
+        <result column="role_code" property="roleCode"/>
+        <result column="role_name" property="roleName"/>
+        <result column="role_type" property="roleType"/>
+        <result column="data_scope" property="dataScope"/>
+        <result column="remark" property="remark"/>
+        <result column="status" property="status"/>
+    </resultMap>
+    
+    <select id="selectRolesByUserId" resultMap="BaseResultMap">
+        SELECT r.* FROM sys_role r
+        INNER JOIN sys_user_role ur ON r.id = ur.role_id
+        WHERE ur.user_id = #{userId}
+        AND r.status = 1
+        AND r.deleted = 0
+    </select>
+    
+    <select id="selectMenuIdsByRoleId" resultType="java.lang.Long">
+        SELECT menu_id FROM sys_role_menu 
+        WHERE role_id = #{roleId}
+    </select>
+    
+</mapper>

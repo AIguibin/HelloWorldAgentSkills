@@ -1,0 +1,205 @@
+# ============================================
+# AI自动化编程技能配置文件
+# 项目名称：aiguibin-platform-arch
+# 版本：v1.0.0
+# 生成时间：2026-02-22
+# ============================================
+
+# 项目基本信息
+project:
+  name: aiguibin-platform-arch
+  version: v1.0.0
+  description: 企业级架构管理平台
+  author: aiguibin
+  create_time: 2026-02-22
+
+# 执行目标
+execution:
+  goal: A  # A=基于现有文档生成完整可运行代码
+  strategy: complete  # complete=完整执行，incremental=增量执行
+
+# 模块范围
+modules:
+  core:
+    - name: 系统设置模块
+      priority: high
+      status: enabled
+    - name: 认证授权模块
+      priority: high
+      status: enabled
+    - name: 数据库比对模块
+      priority: high
+      status: enabled
+  optional:
+    - name: 消息队列管理模块
+      priority: medium
+      status: disabled
+    - name: 网络域名管理模块
+      priority: medium
+      status: disabled
+    - name: 网络SLB管理模块
+      priority: medium
+      status: disabled
+    - name: 关联系统管理模块
+      priority: medium
+      status: disabled
+    - name: 配置管理模块
+      priority: medium
+      status: disabled
+    - name: 接口管理模块
+      priority: medium
+      status: disabled
+    - name: 基础数据模块
+      priority: medium
+      status: disabled
+    - name: 开发规范模块
+      priority: medium
+      status: disabled
+    - name: 效能手册模块
+      priority: medium
+      status: disabled
+    - name: 系统架构模块
+      priority: medium
+      status: disabled
+
+# 技术栈配置
+tech_stack:
+  backend:
+    framework: spring-boot
+    version: 3.2.5
+    language: java
+    language_version: 17
+    security: spring-security-jwt
+    orm: mybatis-plus
+    orm_version: 3.5.6
+    datasource: dynamic-datasource
+    datasource_version: 4.3.0
+    excel: easyexcel
+    excel_version: 3.3.4
+    cache: caffeine
+    cache_version: 3.1.8
+    connection_pool: druid
+    connection_pool_version: 1.2.22
+    utils: hutool
+    utils_version: 5.8.25
+    api_doc: knife4j
+    api_doc_version: 4.5.0
+  frontend:
+    framework: vue
+    version: 3.4.21
+    build_tool: vite
+    build_tool_version: 5.2.0
+    ui: element-plus
+    ui_version: 2.6.3
+    strategy: api-first  # api-first=先实现后端API，提供Knife4j文档
+  database:
+    type: mysql
+    version: 8.0
+    strategy: local-simulate  # local-simulate=本地模拟
+
+# 外部集成策略
+external_integration:
+  svn:
+    enabled: true
+    strategy: local-file-system  # local-file-system=使用本地文件系统替代
+    config:
+      work_copy_path: /data/svn-work
+  feiqiu:
+    enabled: false
+    strategy: disable  # disable=禁用通知功能
+    config:
+      enabled: false
+  redis:
+    enabled: true
+    strategy: caffeine  # caffeine=使用Caffeine本地缓存替代
+    config:
+      cache_type: caffeine
+  database:
+    enabled: true
+    strategy: local-mysql  # local-mysql=使用本地MySQL模拟
+    config:
+      url: jdbc:mysql://localhost:3306/aiguibin_platform
+      username: root
+      password: root
+
+# 开发规范
+coding_standards:
+  backend:
+    java:
+      specification: alibaba-java
+      naming: camel-case
+      comment: required
+  frontend:
+        vue:
+          composition_api: true
+          script_setup: true
+  database:
+    table_prefix: t_
+    field_prefix: f_
+    standard_fields:
+      - id
+      - create_time
+      - update_time
+      - is_deleted
+
+# 质量要求
+quality:
+  test_coverage:
+    line: 80
+    branch: 70
+    method: 100
+  code_review:
+    enabled: true
+    interval: 50  # 每50个任务复核一次
+  documentation:
+    api_doc: true
+    database_doc: true
+    deployment_doc: true
+
+# 执行计划
+execution_plan:
+  phases:
+    - name: 阶段0-文档理解与意图分析
+      status: completed
+    - name: 阶段1-2-需求分析与定版
+      status: pending
+    - name: 阶段3-架构设计与定版
+      status: pending
+    - name: 阶段4-5-原子执行计划拆分与索引生成
+      status: pending
+    - name: 阶段6-AI自动化执行
+      status: pending
+    - name: 阶段7-全流程交付物终审
+      status: pending
+    - name: 阶段8-文档归档与沉淀
+      status: pending
+  estimated_tasks:
+    total: 280
+    system_settings: 100
+    auth: 60
+    database_compare: 120
+
+# 文档路径
+paths:
+  input:
+    base: other/aiguibin-auto-dev/00_input_documents
+    requirement_spec: 01-需求规格说明书/01-需求规格说明书-v3.md
+    architecture_design: 02-架构设计文档/02-架构设计-v3.md
+    detail_design: 04-详细设计文档/04-详细设计-v3.md
+    database_design: 05-数据库设计文档/05-数据库设计-v3.md
+    example_code: 06-示例代码文件
+  output:
+    base: 00_stage0_output
+    stage1: 01_stage1_output
+    stage2: 02_stage2_output
+    stage3: 03_stage3_output
+    stage4: 04_stage4_output
+    stage5: 05_stage5_output
+    stage6: 06_stage6_output
+    stage7: 07_stage7_output
+    stage8: 08_stage8_output
+  source_code:
+    backend: aiguibin-platform-arch
+    frontend: aiguibin-platform-ui
+
+# 配置文件结束

@@ -1,0 +1,99 @@
+# 开发环境配置
+spring:
+  datasource:
+    dynamic:
+      primary: master
+      strict: false
+      grace-destroy: false
+      datasource:
+        # 配置库
+        master:
+          url: jdbc:mysql://localhost:3306/platform_config?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          type: com.alibaba.druid.pool.DruidDataSource
+          druid:
+            initial-size: 5
+            max-active: 20
+            min-idle: 5
+            max-wait: 60000
+
+        # DEV环境数据源组 (7个数据库)
+        dev-ncms-credit:
+          url: jdbc:mysql://localhost:3306/ncms_credit?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          type: com.alibaba.druid.pool.DruidDataSource
+        dev-ncms-rule:
+          url: jdbc:mysql://localhost:3306/ncms_rule_base?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          type: com.alibaba.druid.pool.DruidDataSource
+        dev-ncms-collateral:
+          url: jdbc:mysql://localhost:3306/ncms_collateral?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          type: com.alibaba.druid.pool.DruidDataSource
+        dev-ncms-customer:
+          url: jdbc:mysql://localhost:3306/ncms_customer?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          type: com.alibaba.druid.pool.DruidDataSource
+        dev-ncms-product:
+          url: jdbc:mysql://localhost:3306/ncms_product?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          type: com.alibaba.druid.pool.DruidDataSource
+        dev-ncms-account:
+          url: jdbc:mysql://localhost:3306/ncms_account?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          type: com.alibaba.druid.pool.DruidDataSource
+        dev-ncms-batch:
+          url: jdbc:mysql://localhost:3306/ncms_batch?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          type: com.alibaba.druid.pool.DruidDataSource
+
+# MyBatis-Plus配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# SVN配置
+svn:
+  url: svn://localhost/arch-platform
+  username: svnuser
+  password: svnpass
+  work-copy-path: ${user.home}/svn-work/arch-platform
+  doc-relative-path: docs
+  result-relative-path: results
+
+# 飞秋配置
+feiQ:
+  server-url: http://localhost:8080
+  server-port: 8080
+  receivers: user1,user2,user3
+
+# 定时任务配置
+schedule:
+  dev:
+    cron: "0 0 2 * * ?"
+  sit:
+    cron: "0 0 4 * * ?"
+  uat:
+    cron: "0 0 6 * * ?"
