@@ -1,0 +1,831 @@
+{
+  "summary": {
+    "原始分区表数": 93,
+    "V3分区表数": 21,
+    "被移除": 79,
+    "新加入": 7,
+    "分区键分区数变化": 14,
+    "保持一致": 0
+  },
+  "removed": {
+    "r_rtl_cont_sign_dtl": {
+      "表中文名": "合同签订明细(零售)",
+      "表英文名": "R_RTL_CONT_SIGN_DTL",
+      "模块": "合同管理",
+      "原始分区键": "CTRT_NO",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "ecif_c_addr_info": {
+      "表中文名": "对公客户地址信息表",
+      "表英文名": "ECIF_C_ADDR_INFO",
+      "模块": "客户中心",
+      "原始分区键": "CUST_INTL_SEQ_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "ecif_c_certno_ref": {
+      "表中文名": "对公证件识别表",
+      "表英文名": "ECIF_C_CERTNO_REF",
+      "模块": "客户中心",
+      "原始分区键": "CUST_INTL_SEQ_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "ecif_c_corp_rel": {
+      "表中文名": "对公客户关系企业信息表",
+      "表英文名": "ECIF_C_CORP_REL",
+      "模块": "客户中心",
+      "原始分区键": "CUST_INTL_SEQ_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "ecif_c_cust_info": {
+      "表中文名": "对公客户基本信息表",
+      "表英文名": "ECIF_C_CUST_INFO",
+      "模块": "客户中心",
+      "原始分区键": "CUST_INTL_SEQ_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "ecif_c_cust_rel": {
+      "表中文名": "对公客户关系个人信息表",
+      "表英文名": "ECIF_C_CUST_REL",
+      "模块": "客户中心",
+      "原始分区键": "CUST_INTL_SEQ_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "ecif_c_custno_ref": {
+      "表中文名": "对公客户号识别表",
+      "表英文名": "ECIF_C_CUSTNO_REF",
+      "模块": "客户中心",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "ecif_c_phone_info": {
+      "表中文名": "对公客户联系信息表",
+      "表英文名": "ECIF_C_PHONE_INFO",
+      "模块": "客户中心",
+      "原始分区键": "CUST_INTL_SEQ_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "ecif_corp_cust_lst_info": {
+      "表中文名": "对公客户上市公司信息表",
+      "表英文名": "ECIF_CORP_CUST_LST_INFO",
+      "模块": "客户中心",
+      "原始分区键": "CUST_INTL_SEQ_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "ecif_p_cust_rel": {
+      "表中文名": "个人客户关联个人信息表",
+      "表英文名": "ECIF_P_CUST_REL",
+      "模块": "客户中心",
+      "原始分区键": "CUST_INTL_SEQ_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "crlmt_crg_pd_lmt_aply": {
+      "表中文名": "授信产品额度申请信息",
+      "表英文名": "CRLMT_CRG_PD_LMT_APLY",
+      "模块": "授信管理",
+      "原始分区键": "TENANT_ID",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "crlmt_crgln_aply": {
+      "表中文名": "授信申请信息表",
+      "表英文名": "CRLMT_CRGLN_APLY",
+      "模块": "授信管理",
+      "原始分区键": "TENANT_ID",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "crlmt_lmt_reply": {
+      "表中文名": "额度批复表",
+      "表英文名": "CRLMT_LMT_REPLY",
+      "模块": "授信管理",
+      "原始分区键": "TENANT_ID",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "crlmt_lmt_reply_record": {
+      "表中文名": "额度批复过程记录表",
+      "表英文名": "CRLMT_LMT_REPLY_RECORD",
+      "模块": "授信管理",
+      "原始分区键": "TENANT_ID",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "crlmt_sitmlmt_reply": {
+      "表中文名": "分项额度批复表",
+      "表英文名": "CRLMT_SITMLMT_REPLY",
+      "模块": "授信管理",
+      "原始分区键": "TENANT_ID",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "crlmt_sitmlmt_reply_record": {
+      "表中文名": "分项额度批复过程记录表",
+      "表英文名": "CRLMT_SITMLMT_REPLY_RECORD",
+      "模块": "授信管理",
+      "原始分区键": "TENANT_ID",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "dsbr_acg_pcsg_info": {
+      "表中文名": "账务处理流程记录表",
+      "表英文名": "DSBR_ACG_PCSG_INFO",
+      "模块": "放还款组",
+      "原始分区键": "BUS_NO",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "dsbr_cont_acc_inf": {
+      "表中文名": "贷款账户信息",
+      "表英文名": "DSBR_CONT_ACC_INF",
+      "模块": "放还款组",
+      "原始分区键": "TENANT_ID",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "arch_elec_dt": {
+      "表中文名": "档案电子资料表",
+      "表英文名": "ARCH_ELEC_DT",
+      "模块": "档案管理",
+      "原始分区键": "ELC_MTRLS_NO",
+      "原始分区数": "",
+      "V3判断": "不分区"
+    },
+    "arch_wh_tsk": {
+      "表中文名": "档案入库任务表",
+      "表英文名": "ARCH_WH_TSK",
+      "模块": "档案管理",
+      "原始分区键": "ENTWRH_APLY_NO",
+      "原始分区数": "",
+      "V3判断": "不分区"
+    },
+    "arch_wh_tsk_dtl": {
+      "表中文名": "档案待入库清单表",
+      "表英文名": "ARCH_WH_TSK_DTL",
+      "模块": "档案管理",
+      "原始分区键": "BIZ_APLY_NO",
+      "原始分区数": "",
+      "V3判断": "不分区"
+    },
+    "arch_wh_middle": {
+      "表中文名": "档案入库中间表",
+      "表英文名": "ARCH_WH_MIDDLE",
+      "模块": "档案管理",
+      "原始分区键": "BIZ_APLY_NO",
+      "原始分区数": "",
+      "V3判断": "不分区"
+    },
+    "prvt_crline_use_reply": {
+      "表中文名": "对私用信批复表",
+      "表英文名": "PRVT_CRLINE_USE_REPLY",
+      "模块": "用信管理",
+      "原始分区键": "TENANT_ID",
+      "原始分区数": 2,
+      "V3判断": "不分区"
+    },
+    "cust_credit_query_object": {
+      "表中文名": "征信查询对象表",
+      "表英文名": "CUST_CREDIT_QUERY_OBJECT",
+      "模块": "系统管理",
+      "原始分区键": "TENANT_ID",
+      "原始分区数": 5,
+      "V3判断": "不分区"
+    },
+    "cust_credit_query_result": {
+      "表中文名": "征信查询结果",
+      "表英文名": "CUST_CREDIT_QUERY_RESULT",
+      "模块": "系统管理",
+      "原始分区键": "TENANT_ID",
+      "原始分区数": 5,
+      "V3判断": "不分区"
+    },
+    "ped_cust_accumu_fund_qry_apply": {
+      "表中文名": "人行公积金查询申请记录表",
+      "表英文名": "PED_CUST_ACCUMU_FUND_QRY_APPLY",
+      "模块": "系统管理",
+      "原始分区键": "TENANT_ID",
+      "原始分区数": 5,
+      "V3判断": "不分区"
+    },
+    "ped_cust_accumu_fund_qry_result": {
+      "表中文名": "人行公积金查询结果表",
+      "表英文名": "PED_CUST_ACCUMU_FUND_QRY_RESULT",
+      "模块": "系统管理",
+      "原始分区键": "TENANT_ID",
+      "原始分区数": 5,
+      "V3判断": "不分区"
+    },
+    "sys_log": {
+      "表中文名": "日志表",
+      "表英文名": "SYS_LOG",
+      "模块": "系统管理",
+      "原始分区键": "CREATE_TIME，3个月一个分区",
+      "原始分区数": "",
+      "V3判断": "不分区"
+    },
+    "sys_login_log": {
+      "表中文名": "用户登录日志表",
+      "表英文名": "SYS_LOGIN_LOG",
+      "模块": "系统管理",
+      "原始分区键": "CREATE_TIME，3个月一个分区",
+      "原始分区数": "",
+      "V3判断": "不分区"
+    },
+    "cmpn_acs_reail": {
+      "表中文名": "营销走访轨迹表",
+      "表英文名": "CMPN_ACS_REAIL",
+      "模块": "营销管理",
+      "原始分区键": "MKT_VST_TRK_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_acs_rgs": {
+      "表中文名": "营销走访登记表",
+      "表英文名": "CMPN_ACS_RGS",
+      "模块": "营销管理",
+      "原始分区键": "MKT_VST_REG_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "cmpn_avy_dig_nmlst_cst": {
+      "表中文名": "活动挖掘名单客户表",
+      "表英文名": "CMPN_AVY_DIG_NMLST_CST",
+      "模块": "营销管理",
+      "原始分区键": "AVY_AND_TAP_TYP_RLVC_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "cmpn_avy_lbl_cst": {
+      "表中文名": "活动标签客户表",
+      "表英文名": "CMPN_AVY_LBL_CST",
+      "模块": "营销管理",
+      "原始分区键": "AVY_AND_LBL_RLVC_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "cmpn_dlhp_dig_nmlst_cst": {
+      "表中文名": "湖仓加载挖掘名单客户表",
+      "表英文名": "CMPN_DLHP_DIG_NMLST_CST",
+      "模块": "营销管理",
+      "原始分区键": "DLHP_TAP_NMLST_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "cmpn_dlhp_lbl_cst": {
+      "表中文名": "湖仓加载标签客户表",
+      "表英文名": "CMPN_DLHP_LBL_CST",
+      "模块": "营销管理",
+      "原始分区键": "DLHP_CUST_LBL_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "cmpn_dlhp_trgr_ev_cst": {
+      "表中文名": "湖仓加载触发事件客户表",
+      "表英文名": "CMPN_DLHP_TRGR_EV_CST",
+      "模块": "营销管理",
+      "原始分区键": "DLHP_TRGR_EV_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "cmpn_nmlst_cst": {
+      "表中文名": "营销名单客户表",
+      "表英文名": "CMPN_NMLST_CST",
+      "模块": "营销管理",
+      "原始分区键": "MKT_NMLST_NO,ID_CRD_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "cmpn_tsk_cst": {
+      "表中文名": "营销任务客户表",
+      "表英文名": "CMPN_TSK_CST",
+      "模块": "营销管理",
+      "原始分区键": "DOC_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "cmpn_tsk_mgt_dtl": {
+      "表中文名": "营销任务管理明细表",
+      "表英文名": "CMPN_TSK_MGT_DTL",
+      "模块": "营销管理",
+      "原始分区键": "MKT_TSK_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "cmpn_lbl_rule_list_cst": {
+      "表中文名": "营销标签规则集客户表",
+      "表英文名": "CMPN_LBL_RULE_LIST_CST",
+      "模块": "营销管理",
+      "原始分区键": "LBL_RULST_NO",
+      "原始分区数": "",
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_indvd_dep_fnnc_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_个人_客户存款及理财信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_INDVD_DEP_FNNC_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_indvd_ln_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_个人_客户贷款信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_INDVD_LN_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_indvd_base_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_个人_客户基本信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_INDVD_BASE_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_indvd_chnl_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_个人_客户渠道信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_INDVD_CHNL_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_indvd_crinv_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_个人_客户征信信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_INDVD_CRINV_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_indvd_txtnscsrpvdfnd": {
+      "表中文名": "营销_供数新信贷_宽表_个人_客户税务社保公积金信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_INDVD_TXTNSCSRPVDFND",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_indvd_mid_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_个人_客户中间业务信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_INDVD_MID_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_indvd_cr_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_个人_客户信用卡信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_INDVD_CR_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_ln_ctrt_base_infrm_intg": {
+      "表中文名": "营销_供数新信贷_宽表_贷款合同基础信息整合",
+      "表英文名": "CMPN_U_NCMS_WT_LN_CTRT_BASE_INFRM_INTG",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_corp_base_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_对公_客户基本信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_CORP_BASE_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_corp_dep_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_对公_客户存款信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_CORP_DEP_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_corp_ln_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_对公_客户贷款信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_CORP_LN_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_corp_cr_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_对公_客户信用卡信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_CORP_CR_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_corp_mid_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_对公_客户中间业务信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_CORP_MID_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_corp_chnl_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_对公_客户渠道信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_CORP_CHNL_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_corp_crinv_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_对公_客户征信信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_CORP_CRINV_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_corp_txtnscsr_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_对公_税务社保缴纳信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_CORP_TXTNSCSR_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "cmpn_u_ncms_wt_cust_corp_finc_infrm": {
+      "表中文名": "营销_供数新信贷_宽表_对公_财务报表信息",
+      "表英文名": "CMPN_U_NCMS_WT_CUST_CORP_FINC_INFRM",
+      "模块": "营销管理",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "rtg_aply_bsc_inf": {
+      "表中文名": "基本信息表",
+      "表英文名": "RTG_APLY_BSC_INF",
+      "模块": "评级管理",
+      "原始分区键": "BUS_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "rtg_aply_bsn_inf": {
+      "表中文名": "业务信息表",
+      "表英文名": "RTG_APLY_BSN_INF",
+      "模块": "评级管理",
+      "原始分区键": "BUS_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "rtg_aply_cnclsn_inf": {
+      "表中文名": "结论信息表",
+      "表英文名": "RTG_APLY_CNCLSN_INF",
+      "模块": "评级管理",
+      "原始分区键": "BUS_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "rtg_aply_cnclsn_inf_hist": {
+      "表中文名": "结论信息历史表",
+      "表英文名": "RTG_APLY_CNCLSN_INF_HIST",
+      "模块": "评级管理",
+      "原始分区键": "BUS_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "rtg_aply_cprsv_ass_inf": {
+      "表中文名": "综合评价信息表",
+      "表英文名": "RTG_APLY_CPRSV_ASS_INF",
+      "模块": "评级管理",
+      "原始分区键": "BUS_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "rtg_aply_rslt_inf": {
+      "表中文名": "结果信息表",
+      "表英文名": "RTG_APLY_RSLT_INF",
+      "模块": "评级管理",
+      "原始分区键": "BUS_NO",
+      "原始分区数": 50,
+      "V3判断": "不分区"
+    },
+    "pstloan_chk_cust_rel_inf": {
+      "表中文名": "贷后检查关联人信息表",
+      "表英文名": "PSTLOAN_CHK_CUST_REL_INF",
+      "模块": "贷后管理",
+      "原始分区键": "TSK_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "pstloan_chk_index_summ_inf": {
+      "表中文名": "贷后检查征信指标汇总信息表",
+      "表英文名": "PSTLOAN_CHK_INDEX_SUMM_INF",
+      "模块": "贷后管理",
+      "原始分区键": "TSK_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "pstloan_chk_loan_inf": {
+      "表中文名": "贷后检查贷款信息表",
+      "表英文名": "PSTLOAN_CHK_LOAN_INF",
+      "模块": "贷后管理",
+      "原始分区键": "TSK_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "pstloan_chk_non_loan_inf": {
+      "表中文名": "贷后检查行内未结清贷款信息表",
+      "表英文名": "PSTLOAN_CHK_NON_LOAN_INF",
+      "模块": "贷后管理",
+      "原始分区键": "TSK_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "pstloan_pstins_prvt_warn_rec": {
+      "表中文名": "对私常规检查预警记录表",
+      "表英文名": "PSTLOAN_PSTINS_PRVT_WARN_REC",
+      "模块": "贷后管理",
+      "原始分区键": "TSK_NO",
+      "原始分区数": 10,
+      "V3判断": "不分区"
+    },
+    "rtl_risk_asset_cl_inf": {
+      "表中文名": "风险分类资产分类台账表",
+      "表英文名": "RTL_RISK_ASSET_CL_INF",
+      "模块": "风险分类",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "rtl_risk_cl_record_inf": {
+      "表中文名": "风险分类分类记录信息表",
+      "表英文名": "RTL_RISK_CL_RECORD_INF",
+      "模块": "风险分类",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 5,
+      "V3判断": "不分区"
+    },
+    "rtl_risk_cl_res_inf": {
+      "表中文名": "风险分类分类结果信息表",
+      "表英文名": "RTL_RISK_CL_RES_INF",
+      "模块": "风险分类",
+      "原始分区键": "CUST_NO",
+      "原始分区数": 20,
+      "V3判断": "不分区"
+    },
+    "ulm_iou_inf": {
+      "表中文名": "额度借据信息表",
+      "表英文名": "ULM_IOU_INF",
+      "模块": "额度中心",
+      "原始分区键": "GTCR_CUST_NO",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "ulm_lmt_prim_inf": {
+      "表中文名": "额度主表",
+      "表英文名": "ULM_LMT_PRIM_INF",
+      "模块": "额度中心",
+      "原始分区键": "GTCR_CUST_NO",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "ulm_lmt_prim_snpst": {
+      "表中文名": "额度信息快照表",
+      "表英文名": "ULM_LMT_PRIM_SNPST",
+      "模块": "额度中心",
+      "原始分区键": "GTCR_CUST_NO",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "ulm_lmt_rl_ocp_sum": {
+      "表中文名": "额度实占汇总表",
+      "表英文名": "ULM_LMT_RL_OCP_SUM",
+      "模块": "额度中心",
+      "原始分区键": "GTCR_CUST_NO",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "ulm_lmt_use_sttn": {
+      "表中文名": "额度使用流水表",
+      "表英文名": "ULM_LMT_USE_STTN",
+      "模块": "额度中心",
+      "原始分区键": "GTCR_CUST_NO",
+      "原始分区数": 1,
+      "V3判断": "不分区"
+    },
+    "deal_with_file_log": {
+      "表中文名": "征信报告文件处理日志",
+      "表英文名": "DEAL_WITH_FILE_LOG",
+      "模块": "风控中心",
+      "原始分区键": "DEAL_DATE",
+      "原始分区数": "",
+      "V3判断": "不分区"
+    },
+    "rule_logs": {
+      "表中文名": "RULE_LOGS",
+      "表英文名": "RULE_LOGS",
+      "模块": "风控中心",
+      "原始分区键": "CREATE_DATE",
+      "原始分区数": "",
+      "V3判断": "不分区"
+    }
+  },
+  "newly_added": {
+    "cust_permision": {
+      "表中文名": "客户管理权限信息",
+      "表英文名": "cust_permision",
+      "模块": "客户管理",
+      "V3分区键": "CUST_NO",
+      "V3分区数": "23",
+      "原始判断": "原始清单中不存在"
+    },
+    "cust_common_addr": {
+      "表中文名": "客户管理_公共_地址信息表",
+      "表英文名": "cust_common_addr",
+      "模块": "客户管理",
+      "V3分区键": "CUST_NO",
+      "V3分区数": "7",
+      "原始判断": "原始清单中不存在"
+    },
+    "cust_info": {
+      "表中文名": "客户基本信息表",
+      "表英文名": "cust_info",
+      "模块": "客户管理",
+      "V3分区键": "CUST_NO",
+      "V3分区数": "7",
+      "原始判断": "原始清单中不存在"
+    },
+    "cust_personal": {
+      "表中文名": "客户管理_个人客户_基础信息表",
+      "表英文名": "cust_personal",
+      "模块": "客户管理",
+      "V3分区键": "CUST_NO",
+      "V3分区数": "7",
+      "原始判断": "原始清单中不存在"
+    },
+    "b_col_cltlmgtteam_info": {
+      "表中文名": "管理团队信息表",
+      "表英文名": "b_col_cltlmgtteam_info",
+      "模块": "押品管理",
+      "V3分区键": "CLTR_NO",
+      "V3分区数": "5",
+      "原始判断": "原始清单中不存在"
+    },
+    "cust_related": {
+      "表中文名": "客户方关联关系表",
+      "表英文名": "cust_related",
+      "模块": "客户管理",
+      "V3分区键": "CUST_NO",
+      "V3分区数": "5",
+      "原始判断": "原始清单中不存在"
+    },
+    "cust_personal_related_party": {
+      "表中文名": "客户管理_个人客户_家庭成员与社会关系信息表",
+      "表英文名": "cust_personal_related_party",
+      "模块": "客户管理",
+      "V3分区键": "CUST_NO",
+      "V3分区数": "4",
+      "原始判断": "原始清单中不存在"
+    }
+  },
+  "changed": {
+    "ecif_p_addr_info": {
+      "表中文名": "个人客户地址信息表",
+      "表英文名": "ecif_p_addr_info",
+      "模块": "客户中心库",
+      "原始分区键": "CUST_INTL_SEQ_NO",
+      "V3分区键": "CUST_INTL_SEQ_NO",
+      "原始分区数": "50",
+      "V3分区数": "33"
+    },
+    "ecif_p_certno_ref": {
+      "表中文名": "个人证件识别表",
+      "表英文名": "ecif_p_certno_ref",
+      "模块": "客户中心库",
+      "原始分区键": "CUST_INTL_SEQ_NO",
+      "V3分区键": "DOC_NO",
+      "原始分区数": "50",
+      "V3分区数": "28"
+    },
+    "ecif_p_cust_info": {
+      "表中文名": "个人客户基本信息表",
+      "表英文名": "ecif_p_cust_info",
+      "模块": "客户中心库",
+      "原始分区键": "CUST_INTL_SEQ_NO",
+      "V3分区键": "CUST_NO",
+      "原始分区数": "50",
+      "V3分区数": "28"
+    },
+    "ecif_p_custno_ref": {
+      "表中文名": "个人客户号识别表",
+      "表英文名": "ecif_p_custno_ref",
+      "模块": "客户中心库",
+      "原始分区键": "CUST_NO",
+      "V3分区键": "CUST_NO",
+      "原始分区数": "50",
+      "V3分区数": "28"
+    },
+    "ecif_p_phone_info": {
+      "表中文名": "个人客户联系信息表",
+      "表英文名": "ecif_p_phone_info",
+      "模块": "客户中心库",
+      "原始分区键": "CUST_INTL_SEQ_NO",
+      "V3分区键": "CUST_INTL_SEQ_NO",
+      "原始分区数": "50",
+      "V3分区数": "25"
+    },
+    "iou_inf": {
+      "表中文名": "借据信息表",
+      "表英文名": "iou_inf",
+      "模块": "放还款组",
+      "原始分区键": "TENANT_ID",
+      "V3分区键": "CTRT_NO",
+      "原始分区数": "2",
+      "V3分区数": "11"
+    },
+    "arch_info": {
+      "表中文名": "档案信息表",
+      "表英文名": "arch_info",
+      "模块": "档案管理",
+      "原始分区键": "ARS_NO",
+      "V3分区键": "ARS_NO",
+      "原始分区数": "",
+      "V3分区数": "10"
+    },
+    "r_rtl_cont_inf": {
+      "表中文名": "对私用信申请表",
+      "表英文名": "r_rtl_cont_inf",
+      "模块": "用信管理",
+      "原始分区键": "TENANT_ID",
+      "V3分区键": "CTRT_NO",
+      "原始分区数": "2",
+      "V3分区数": "9"
+    },
+    "prvt_ctr_inf": {
+      "表中文名": "对私合同信息表",
+      "表英文名": "prvt_ctr_inf",
+      "模块": "合同管理",
+      "原始分区键": "CTRT_NO",
+      "V3分区键": "CTRT_NO",
+      "原始分区数": "2",
+      "V3分区数": "9"
+    },
+    "cust_credit_query_apply": {
+      "表中文名": "征信查询申请表",
+      "表英文名": "cust_credit_query_apply",
+      "模块": "系统管理",
+      "原始分区键": "TENANT_ID",
+      "V3分区键": "CUST_NO",
+      "原始分区数": "5",
+      "V3分区数": "9"
+    },
+    "loan_rt_labour_gen_chk": {
+      "表中文名": "对私人工通用检查记录表",
+      "表英文名": "loan_rt_labour_gen_chk",
+      "模块": "贷后管理",
+      "原始分区键": "TSK_NO",
+      "V3分区键": "TSK_NO",
+      "原始分区数": "10",
+      "V3分区数": "7"
+    },
+    "rtl_cont_acc_inf": {
+      "表中文名": "合同账户信息",
+      "表英文名": "rtl_cont_acc_inf",
+      "模块": "合同管理",
+      "原始分区键": "CTRT_NO",
+      "V3分区键": "CTRT_NO",
+      "原始分区数": "2",
+      "V3分区数": "7"
+    },
+    "loan_postloan_chk_result": {
+      "表中文名": "检查结果记录表",
+      "表英文名": "loan_postloan_chk_result",
+      "模块": "贷后管理",
+      "原始分区键": "TSK_NO",
+      "V3分区键": "TSK_NO",
+      "原始分区数": "10",
+      "V3分区数": "5"
+    },
+    "r_loan_ftm_chk_tsk_tbl": {
+      "表中文名": "贷后检查任务表",
+      "表英文名": "r_loan_ftm_chk_tsk_tbl",
+      "模块": "贷后管理",
+      "原始分区键": "CUST_NO",
+      "V3分区键": "TSK_NO",
+      "原始分区数": "10",
+      "V3分区数": "5"
+    }
+  },
+  "consistent": {}
+}

@@ -1,0 +1,1814 @@
+{
+  "partition_table_count": 93,
+  "partition_tables": [
+    {
+      "seq": 1,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "合同管理",
+      "owner": "彭驰腾",
+      "table_en": "PRVT_CTR_INF",
+      "table_cn": "对私合同信息表",
+      "partition_key": "CTRT_NO",
+      "partition_count": 2,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 2,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "合同管理",
+      "owner": "彭驰腾",
+      "table_en": "R_RTL_CONT_SIGN_DTL",
+      "table_cn": "合同签订明细(零售)",
+      "partition_key": "CTRT_NO",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 3,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "合同管理",
+      "owner": "彭驰腾",
+      "table_en": "RTL_CONT_ACC_INF",
+      "table_cn": "合同账户信息",
+      "partition_key": "CTRT_NO",
+      "partition_count": 2,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 4,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_C_ADDR_INFO",
+      "table_cn": "对公客户地址信息表",
+      "partition_key": "CUST_INTL_SEQ_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 5,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_C_CERTNO_REF",
+      "table_cn": "对公证件识别表",
+      "partition_key": "CUST_INTL_SEQ_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 6,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_C_CORP_REL",
+      "table_cn": "对公客户关系企业信息表",
+      "partition_key": "CUST_INTL_SEQ_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 7,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_C_CUST_INFO",
+      "table_cn": "对公客户基本信息表",
+      "partition_key": "CUST_INTL_SEQ_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 8,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_C_CUST_REL",
+      "table_cn": "对公客户关系个人信息表",
+      "partition_key": "CUST_INTL_SEQ_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 9,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_C_CUSTNO_REF",
+      "table_cn": "对公客户号识别表",
+      "partition_key": "CUST_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 10,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_C_PHONE_INFO",
+      "table_cn": "对公客户联系信息表",
+      "partition_key": "CUST_INTL_SEQ_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 11,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_CORP_CUST_LST_INFO",
+      "table_cn": "对公客户上市公司信息表",
+      "partition_key": "CUST_INTL_SEQ_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 12,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_P_ADDR_INFO",
+      "table_cn": "个人客户地址信息表",
+      "partition_key": "CUST_INTL_SEQ_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 13,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_P_CERTNO_REF",
+      "table_cn": "个人证件识别表",
+      "partition_key": "CUST_INTL_SEQ_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 14,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_P_CUST_INFO",
+      "table_cn": "个人客户基本信息表",
+      "partition_key": "CUST_INTL_SEQ_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 15,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_P_CUST_REL",
+      "table_cn": "个人客户关联个人信息表",
+      "partition_key": "CUST_INTL_SEQ_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 16,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_P_CUSTNO_REF",
+      "table_cn": "个人客户号识别表",
+      "partition_key": "CUST_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 17,
+      "db": "NCMS_CUSTOMER_BASE",
+      "module": "客户中心",
+      "owner": "王进",
+      "table_en": "ECIF_P_PHONE_INFO",
+      "table_cn": "个人客户联系信息表",
+      "partition_key": "CUST_INTL_SEQ_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 18,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "授信管理",
+      "owner": "王凯杰",
+      "table_en": "CRLMT_CRG_PD_LMT_APLY",
+      "table_cn": "授信产品额度申请信息",
+      "partition_key": "TENANT_ID",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 19,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "授信管理",
+      "owner": "王凯杰",
+      "table_en": "CRLMT_CRGLN_APLY",
+      "table_cn": "授信申请信息表",
+      "partition_key": "TENANT_ID",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 20,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "授信管理",
+      "owner": "王凯杰",
+      "table_en": "CRLMT_LMT_REPLY",
+      "table_cn": "额度批复表",
+      "partition_key": "TENANT_ID",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 21,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "授信管理",
+      "owner": "王凯杰",
+      "table_en": "CRLMT_LMT_REPLY_RECORD",
+      "table_cn": "额度批复过程记录表",
+      "partition_key": "TENANT_ID",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 22,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "授信管理",
+      "owner": "王凯杰",
+      "table_en": "CRLMT_SITMLMT_REPLY",
+      "table_cn": "分项额度批复表",
+      "partition_key": "TENANT_ID",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 23,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "授信管理",
+      "owner": "王凯杰",
+      "table_en": "CRLMT_SITMLMT_REPLY_RECORD",
+      "table_cn": "分项额度批复过程记录表",
+      "partition_key": "TENANT_ID",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 24,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "放还款组",
+      "owner": "崔雅楠",
+      "table_en": "DSBR_ACG_PCSG_INFO",
+      "table_cn": "账务处理流程记录表",
+      "partition_key": "BUS_NO",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 25,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "放还款组",
+      "owner": "崔雅楠",
+      "table_en": "DSBR_CONT_ACC_INF",
+      "table_cn": "贷款账户信息",
+      "partition_key": "TENANT_ID",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 26,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "放还款组",
+      "owner": "崔雅楠",
+      "table_en": "IOU_INF",
+      "table_cn": "借据信息表",
+      "partition_key": "TENANT_ID",
+      "partition_count": 2,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 27,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "档案管理",
+      "owner": "曹冠南",
+      "table_en": "ARCH_ELEC_DT",
+      "table_cn": "档案电子资料表",
+      "partition_key": "ELC_MTRLS_NO",
+      "partition_count": "",
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 28,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "档案管理",
+      "owner": "曹冠南",
+      "table_en": "ARCH_INFO",
+      "table_cn": "档案信息表",
+      "partition_key": "ARS_NO",
+      "partition_count": "",
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 29,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "档案管理",
+      "owner": "曹冠南",
+      "table_en": "ARCH_WH_TSK",
+      "table_cn": "档案入库任务表",
+      "partition_key": "ENTWRH_APLY_NO",
+      "partition_count": "",
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 30,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "档案管理",
+      "owner": "曹冠南",
+      "table_en": "ARCH_WH_TSK_DTL",
+      "table_cn": "档案待入库清单表",
+      "partition_key": "BIZ_APLY_NO",
+      "partition_count": "",
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 31,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "档案管理",
+      "owner": "周鑫",
+      "table_en": "ARCH_WH_MIDDLE",
+      "table_cn": "档案入库中间表",
+      "partition_key": "BIZ_APLY_NO",
+      "partition_count": "",
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 32,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "用信管理",
+      "owner": "程东涛",
+      "table_en": "PRVT_CRLINE_USE_REPLY",
+      "table_cn": "对私用信批复表",
+      "partition_key": "TENANT_ID",
+      "partition_count": 2,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 33,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "用信管理",
+      "owner": "程东涛",
+      "table_en": "R_RTL_CONT_INF",
+      "table_cn": "对私用信申请表",
+      "partition_key": "TENANT_ID",
+      "partition_count": 2,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 34,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "系统管理",
+      "owner": "黄辉",
+      "table_en": "CUST_CREDIT_QUERY_APPLY",
+      "table_cn": "征信查询申请表",
+      "partition_key": "TENANT_ID",
+      "partition_count": 5,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 35,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "系统管理",
+      "owner": "黄辉",
+      "table_en": "CUST_CREDIT_QUERY_OBJECT",
+      "table_cn": "征信查询对象表",
+      "partition_key": "TENANT_ID",
+      "partition_count": 5,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 36,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "系统管理",
+      "owner": "黄辉",
+      "table_en": "CUST_CREDIT_QUERY_RESULT",
+      "table_cn": "征信查询结果",
+      "partition_key": "TENANT_ID",
+      "partition_count": 5,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 37,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "系统管理",
+      "owner": "黄辉",
+      "table_en": "PED_CUST_ACCUMU_FUND_QRY_APPLY",
+      "table_cn": "人行公积金查询申请记录表",
+      "partition_key": "TENANT_ID",
+      "partition_count": 5,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 38,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "系统管理",
+      "owner": "黄辉",
+      "table_en": "PED_CUST_ACCUMU_FUND_QRY_RESULT",
+      "table_cn": "人行公积金查询结果表",
+      "partition_key": "TENANT_ID",
+      "partition_count": 5,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 39,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "系统管理",
+      "owner": "黄辉",
+      "table_en": "SYS_LOG",
+      "table_cn": "日志表",
+      "partition_key": "CREATE_TIME，3个月一个分区",
+      "partition_count": "",
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 40,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "系统管理",
+      "owner": "黄辉",
+      "table_en": "SYS_LOGIN_LOG",
+      "table_cn": "用户登录日志表",
+      "partition_key": "CREATE_TIME，3个月一个分区",
+      "partition_count": "",
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 41,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_ACS_REAIL",
+      "table_cn": "营销走访轨迹表",
+      "partition_key": "MKT_VST_TRK_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 42,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_ACS_RGS",
+      "table_cn": "营销走访登记表",
+      "partition_key": "MKT_VST_REG_NO",
+      "partition_count": 10,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 43,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_AVY_DIG_NMLST_CST",
+      "table_cn": "活动挖掘名单客户表",
+      "partition_key": "AVY_AND_TAP_TYP_RLVC_NO",
+      "partition_count": 10,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 44,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_AVY_LBL_CST",
+      "table_cn": "活动标签客户表",
+      "partition_key": "AVY_AND_LBL_RLVC_NO",
+      "partition_count": 10,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 45,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_DLHP_DIG_NMLST_CST",
+      "table_cn": "湖仓加载挖掘名单客户表",
+      "partition_key": "DLHP_TAP_NMLST_NO",
+      "partition_count": 10,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 46,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_DLHP_LBL_CST",
+      "table_cn": "湖仓加载标签客户表",
+      "partition_key": "DLHP_CUST_LBL_NO",
+      "partition_count": 10,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 47,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_DLHP_TRGR_EV_CST",
+      "table_cn": "湖仓加载触发事件客户表",
+      "partition_key": "DLHP_TRGR_EV_NO",
+      "partition_count": 10,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 48,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_NMLST_CST",
+      "table_cn": "营销名单客户表",
+      "partition_key": "MKT_NMLST_NO,ID_CRD_NO",
+      "partition_count": 10,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 49,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_TSK_CST",
+      "table_cn": "营销任务客户表",
+      "partition_key": "DOC_NO",
+      "partition_count": 10,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 50,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_TSK_MGT_DTL",
+      "table_cn": "营销任务管理明细表",
+      "partition_key": "MKT_TSK_NO",
+      "partition_count": 10,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 51,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_LBL_RULE_LIST_CST",
+      "table_cn": "营销标签规则集客户表",
+      "partition_key": "LBL_RULST_NO",
+      "partition_count": "",
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 52,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_INDVD_DEP_FNNC_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_个人_客户存款及理财信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 53,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_INDVD_LN_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_个人_客户贷款信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 54,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_INDVD_BASE_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_个人_客户基本信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 55,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_INDVD_CHNL_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_个人_客户渠道信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 56,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_INDVD_CRINV_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_个人_客户征信信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 57,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_INDVD_TXTNSCSRPVDFND",
+      "table_cn": "营销_供数新信贷_宽表_个人_客户税务社保公积金信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 58,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_INDVD_MID_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_个人_客户中间业务信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 59,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_INDVD_CR_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_个人_客户信用卡信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 60,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_LN_CTRT_BASE_INFRM_INTG",
+      "table_cn": "营销_供数新信贷_宽表_贷款合同基础信息整合",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 61,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_CORP_BASE_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_对公_客户基本信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 62,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_CORP_DEP_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_对公_客户存款信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 63,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_CORP_LN_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_对公_客户贷款信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 64,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_CORP_CR_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_对公_客户信用卡信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 65,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_CORP_MID_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_对公_客户中间业务信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 66,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_CORP_CHNL_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_对公_客户渠道信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 67,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_CORP_CRINV_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_对公_客户征信信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 68,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_CORP_TXTNSCSR_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_对公_税务社保缴纳信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 69,
+      "db": "NCMS_CREDIT_SIT",
+      "module": "营销管理",
+      "owner": "周鑫",
+      "table_en": "CMPN_U_NCMS_WT_CUST_CORP_FINC_INFRM",
+      "table_cn": "营销_供数新信贷_宽表_对公_财务报表信息",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 70,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "评级管理",
+      "owner": "黄辉",
+      "table_en": "RTG_APLY_BSC_INF",
+      "table_cn": "基本信息表",
+      "partition_key": "BUS_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 71,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "评级管理",
+      "owner": "黄辉",
+      "table_en": "RTG_APLY_BSN_INF",
+      "table_cn": "业务信息表",
+      "partition_key": "BUS_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 72,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "评级管理",
+      "owner": "黄辉",
+      "table_en": "RTG_APLY_CNCLSN_INF",
+      "table_cn": "结论信息表",
+      "partition_key": "BUS_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 73,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "评级管理",
+      "owner": "黄辉",
+      "table_en": "RTG_APLY_CNCLSN_INF_HIST",
+      "table_cn": "结论信息历史表",
+      "partition_key": "BUS_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 74,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "评级管理",
+      "owner": "黄辉",
+      "table_en": "RTG_APLY_CPRSV_ASS_INF",
+      "table_cn": "综合评价信息表",
+      "partition_key": "BUS_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 75,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "评级管理",
+      "owner": "黄辉",
+      "table_en": "RTG_APLY_RSLT_INF",
+      "table_cn": "结果信息表",
+      "partition_key": "BUS_NO",
+      "partition_count": 50,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 76,
+      "db": "NCMS_RCA_BASE",
+      "module": "贷后管理",
+      "owner": "陈建伟",
+      "table_en": "LOAN_POSTLOAN_CHK_RESULT",
+      "table_cn": "检查结果记录表",
+      "partition_key": "TSK_NO",
+      "partition_count": 10,
+      "partition_strategy": "5600W",
+      "remark": ""
+    },
+    {
+      "seq": 77,
+      "db": "NCMS_RCA_BASE",
+      "module": "贷后管理",
+      "owner": "陈建伟",
+      "table_en": "LOAN_RT_LABOUR_GEN_CHK",
+      "table_cn": "对私人工通用检查记录表",
+      "partition_key": "TSK_NO",
+      "partition_count": 10,
+      "partition_strategy": "5600W",
+      "remark": ""
+    },
+    {
+      "seq": 78,
+      "db": "NCMS_RCA_BASE",
+      "module": "贷后管理",
+      "owner": "陈建伟",
+      "table_en": "PSTLOAN_CHK_CUST_REL_INF",
+      "table_cn": "贷后检查关联人信息表",
+      "partition_key": "TSK_NO",
+      "partition_count": 10,
+      "partition_strategy": "16800W",
+      "remark": ""
+    },
+    {
+      "seq": 79,
+      "db": "NCMS_RCA_BASE",
+      "module": "贷后管理",
+      "owner": "陈建伟",
+      "table_en": "PSTLOAN_CHK_INDEX_SUMM_INF",
+      "table_cn": "贷后检查征信指标汇总信息表",
+      "partition_key": "TSK_NO",
+      "partition_count": 10,
+      "partition_strategy": "5600W",
+      "remark": ""
+    },
+    {
+      "seq": 80,
+      "db": "NCMS_RCA_BASE",
+      "module": "贷后管理",
+      "owner": "陈建伟",
+      "table_en": "PSTLOAN_CHK_LOAN_INF",
+      "table_cn": "贷后检查贷款信息表",
+      "partition_key": "TSK_NO",
+      "partition_count": 10,
+      "partition_strategy": "11200W",
+      "remark": ""
+    },
+    {
+      "seq": 81,
+      "db": "NCMS_RCA_BASE",
+      "module": "贷后管理",
+      "owner": "陈建伟",
+      "table_en": "PSTLOAN_CHK_NON_LOAN_INF",
+      "table_cn": "贷后检查行内未结清贷款信息表",
+      "partition_key": "TSK_NO",
+      "partition_count": 10,
+      "partition_strategy": "22400W",
+      "remark": ""
+    },
+    {
+      "seq": 82,
+      "db": "NCMS_RCA_BASE",
+      "module": "贷后管理",
+      "owner": "陈建伟",
+      "table_en": "PSTLOAN_PSTINS_PRVT_WARN_REC",
+      "table_cn": "对私常规检查预警记录表",
+      "partition_key": "TSK_NO",
+      "partition_count": 10,
+      "partition_strategy": "5600W",
+      "remark": ""
+    },
+    {
+      "seq": 83,
+      "db": "NCMS_RCA_BASE",
+      "module": "贷后管理",
+      "owner": "陈建伟",
+      "table_en": "R_LOAN_FTM_CHK_TSK_TBL",
+      "table_cn": "贷后检查任务表",
+      "partition_key": "CUST_NO",
+      "partition_count": 10,
+      "partition_strategy": "5600W",
+      "remark": ""
+    },
+    {
+      "seq": 84,
+      "db": "NCMS_RCA_BASE",
+      "module": "风险分类",
+      "owner": "陈建伟",
+      "table_en": "RTL_RISK_ASSET_CL_INF",
+      "table_cn": "风险分类资产分类台账表",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "96000W",
+      "remark": ""
+    },
+    {
+      "seq": 85,
+      "db": "NCMS_RCA_BASE",
+      "module": "风险分类",
+      "owner": "陈建伟",
+      "table_en": "RTL_RISK_CL_RECORD_INF",
+      "table_cn": "风险分类分类记录信息表",
+      "partition_key": "CUST_NO",
+      "partition_count": 5,
+      "partition_strategy": "1000W",
+      "remark": ""
+    },
+    {
+      "seq": 86,
+      "db": "NCMS_RCA_BASE",
+      "module": "风险分类",
+      "owner": "陈建伟",
+      "table_en": "RTL_RISK_CL_RES_INF",
+      "table_cn": "风险分类分类结果信息表",
+      "partition_key": "CUST_NO",
+      "partition_count": 20,
+      "partition_strategy": "96000W",
+      "remark": ""
+    },
+    {
+      "seq": 87,
+      "db": "NCMS_CLM_BASE",
+      "module": "额度中心",
+      "owner": "王强",
+      "table_en": "ULM_IOU_INF",
+      "table_cn": "额度借据信息表",
+      "partition_key": "GTCR_CUST_NO",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 88,
+      "db": "NCMS_CLM_BASE",
+      "module": "额度中心",
+      "owner": "王强",
+      "table_en": "ULM_LMT_PRIM_INF",
+      "table_cn": "额度主表",
+      "partition_key": "GTCR_CUST_NO",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 89,
+      "db": "NCMS_CLM_BASE",
+      "module": "额度中心",
+      "owner": "王强",
+      "table_en": "ULM_LMT_PRIM_SNPST",
+      "table_cn": "额度信息快照表",
+      "partition_key": "GTCR_CUST_NO",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 90,
+      "db": "NCMS_CLM_BASE",
+      "module": "额度中心",
+      "owner": "王强",
+      "table_en": "ULM_LMT_RL_OCP_SUM",
+      "table_cn": "额度实占汇总表",
+      "partition_key": "GTCR_CUST_NO",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 91,
+      "db": "NCMS_CLM_BASE",
+      "module": "额度中心",
+      "owner": "王强",
+      "table_en": "ULM_LMT_USE_STTN",
+      "table_cn": "额度使用流水表",
+      "partition_key": "GTCR_CUST_NO",
+      "partition_count": 1,
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 92,
+      "db": "NCMS_CREDIT_BASE",
+      "module": "风控中心",
+      "owner": "高帆",
+      "table_en": "DEAL_WITH_FILE_LOG",
+      "table_cn": "征信报告文件处理日志",
+      "partition_key": "DEAL_DATE",
+      "partition_count": "",
+      "partition_strategy": "",
+      "remark": ""
+    },
+    {
+      "seq": 93,
+      "db": "NCMS_RISK_BASE",
+      "module": "风控中心",
+      "owner": "高帆",
+      "table_en": "RULE_LOGS",
+      "table_cn": "RULE_LOGS",
+      "partition_key": "CREATE_DATE",
+      "partition_count": "",
+      "partition_strategy": "",
+      "remark": ""
+    }
+  ],
+  "prod_data_table_count": 188,
+  "top30_tables": [
+    {
+      "name": "ecif_p_addr_info",
+      "count": 78962956
+    },
+    {
+      "name": "ecif_p_certno_ref",
+      "count": 66226865
+    },
+    {
+      "name": "ecif_p_cust_info",
+      "count": 65919493
+    },
+    {
+      "name": "ecif_p_custno_ref",
+      "count": 65919493
+    },
+    {
+      "name": "ecif_p_phone_info",
+      "count": 59444109
+    },
+    {
+      "name": "cust_permision",
+      "count": 53383935
+    },
+    {
+      "name": "cust_credit_query_apply",
+      "count": 20044912
+    },
+    {
+      "name": "iou_inf",
+      "count": 20044884
+    },
+    {
+      "name": "arch_info",
+      "count": 18190287
+    },
+    {
+      "name": "r_rtl_cont_inf",
+      "count": 17373643
+    },
+    {
+      "name": "prvt_ctr_inf",
+      "count": 16755742
+    },
+    {
+      "name": "cust_common_addr",
+      "count": 16725930
+    },
+    {
+      "name": "cust_info",
+      "count": 16524853
+    },
+    {
+      "name": "cust_personal",
+      "count": 16292838
+    },
+    {
+      "name": "rtl_cont_acc_inf",
+      "count": 13627334
+    },
+    {
+      "name": "loan_rt_labour_gen_chk",
+      "count": 10325278
+    },
+    {
+      "name": "cust_related",
+      "count": 10099904
+    },
+    {
+      "name": "b_col_cltlmgtteam_info",
+      "count": 9434987
+    },
+    {
+      "name": "cust_personal_related_party",
+      "count": 9215506
+    },
+    {
+      "name": "loan_postloan_chk_result",
+      "count": 7413199
+    },
+    {
+      "name": "r_loan_ftm_chk_tsk_tbl",
+      "count": 6732415
+    },
+    {
+      "name": "dsbr_cont_acc_inf",
+      "count": 6134484
+    },
+    {
+      "name": "b_col_base_info",
+      "count": 4986180
+    },
+    {
+      "name": "b_col_value_process_sub",
+      "count": 4967055
+    },
+    {
+      "name": "prvt_crline_use_reply",
+      "count": 4472539
+    },
+    {
+      "name": "ulm_lmt_rl_ocp_sum",
+      "count": 4310369
+    },
+    {
+      "name": "ecif_p_cust_rel",
+      "count": 4081716
+    },
+    {
+      "name": "ulm_lmt_prim_inf",
+      "count": 4079812
+    },
+    {
+      "name": "b_col_hspty_cltl_dtl_inf",
+      "count": 3858232
+    },
+    {
+      "name": "cust_circle_member",
+      "count": 3517310
+    }
+  ],
+  "all_prod_data": {
+    "ecif_p_addr_info": 78962956,
+    "ecif_p_certno_ref": 66226865,
+    "ecif_p_cust_info": 65919493,
+    "ecif_p_custno_ref": 65919493,
+    "ecif_p_phone_info": 59444109,
+    "cust_permision": 53383935,
+    "cust_credit_query_apply": 20044912,
+    "iou_inf": 20044884,
+    "arch_info": 18190287,
+    "r_rtl_cont_inf": 17373643,
+    "prvt_ctr_inf": 16755742,
+    "cust_common_addr": 16725930,
+    "cust_info": 16524853,
+    "cust_personal": 16292838,
+    "rtl_cont_acc_inf": 13627334,
+    "loan_rt_labour_gen_chk": 10325278,
+    "cust_related": 10099904,
+    "b_col_cltlmgtteam_info": 9434987,
+    "cust_personal_related_party": 9215506,
+    "loan_postloan_chk_result": 7413199,
+    "r_loan_ftm_chk_tsk_tbl": 6732415,
+    "dsbr_cont_acc_inf": 6134484,
+    "b_col_base_info": 4986180,
+    "b_col_value_process_sub": 4967055,
+    "prvt_crline_use_reply": 4472539,
+    "ulm_lmt_rl_ocp_sum": 4310369,
+    "ecif_p_cust_rel": 4081716,
+    "ulm_lmt_prim_inf": 4079812,
+    "b_col_hspty_cltl_dtl_inf": 3858232,
+    "cust_circle_member": 3517310,
+    "rtl_pay_dsbr_dtl_inf": 3067242,
+    "b_col_residence_dtl": 3036709,
+    "rtg_aply_rslt_inf": 2951511,
+    "rtl_cont_gnt_ctr_rel": 2948926,
+    "rtl_cont_clt_rel": 2681773,
+    "rtl_cont_wrnt_ctr": 2630880,
+    "pstloan_pstins_prvt_warn_rec": 2622923,
+    "ecif_c_cust_rel": 2549828,
+    "mdf_crline_use_wrnt_inf": 2518835,
+    "dsbr_agm_pay_repy_pln": 2425879,
+    "b_col_warrant_info": 2185368,
+    "crlmt_lmt_reply": 2127017,
+    "ulm_iou_inf": 2126736,
+    "ecif_c_certno_ref": 1885517,
+    "arch_elec_dt": 1757234,
+    "mdf_crline_use_with_cltl": 1727217,
+    "ecif_c_phone_info": 1578751,
+    "ecif_c_addr_info": 1314928,
+    "crlmt_crgln_aply": 1293159,
+    "ecif_c_cust_info": 1208302,
+    "ecif_c_custno_ref": 1208302,
+    "prvt_crline_use_jnt_brwr": 1207135,
+    "rtl_pay_dtl": 1152249,
+    "cust_corporat_related_party": 884398,
+    "mdf_crline_use_rltv_ctr": 809474,
+    "rtl_cont_aply_inf": 739484,
+    "b_col_house_biz_dtl": 698113,
+    "rtl_cont_inf": 657474,
+    "ohous_hs_mrtg_loan_inf": 518659,
+    "off_iou_inf": 514378,
+    "crlmt_renew_loan_result": 502596,
+    "cust_lists_grey_inf": 484493,
+    "b_col_deposit_dtl": 439295,
+    "rtl_cont_bl_dsct_dtl_inf": 343469,
+    "cust_black": 318789,
+    "cust_corporat_shareholder": 314456,
+    "rtl_crline_use_aprv_inf": 269624,
+    "cust_corporat_lgl_rept": 267313,
+    "cust_corporat": 232015,
+    "dsbr_rltv_bill_inf": 220379,
+    "ol_cc_mkt_winbid_inf": 212124,
+    "pstloan_warn_info_base": 200357,
+    "ol_online_apl_aply": 184196,
+    "rtl_banksynd_ibnk_inf": 183451,
+    "b_ap_cont_info": 174532,
+    "ol_ctdkm_aply_inf": 142397,
+    "b_col_lur_dtl": 124538,
+    "r_loan_ftm_chk_tsk_tbl_mng": 121075,
+    "b_col_house_industry_dtl": 116261,
+    "mdf_crline_use_rltv_iou": 110283,
+    "b_col_othr_clt_inf": 90070,
+    "prvt_crline_use_prtn_jrnl": 77198,
+    "cust_corporat_act_ctrl": 65725,
+    "b_col_car_dtl": 52104,
+    "cust_circle": 51080,
+    "rtl_cont_bl_dsct_inf": 51069,
+    "b_col_trading_dtl": 50456,
+    "rtl_prtn_inf": 46935,
+    "ecif_c_corp_rel": 44826,
+    "b_col_wage_pft_wght_inf": 44577,
+    "b_col_mrgn_dtl": 42895,
+    "b_col_equipment_dtl": 40088,
+    "sys_user_org_dept_role_rel": 35087,
+    "ol_cc_pch_pln_cptl_src_inf": 32533,
+    "corp_crline_co_borrower_inf": 30353,
+    "b_col_co_owner_info": 29220,
+    "crlmt_branch_jurisdiction_group": 26547,
+    "b_col_acceptance_dtl": 26177,
+    "ol_cc_pch_pln_inf": 14527,
+    "b_col_depot_bill_dtl": 11562,
+    "loan_cp_labour_gen_chk": 10344,
+    "ol_cc_splr_htwnbd_inf": 10027,
+    "b_col_ctrtg_land_dtl": 8263,
+    "dsbr_banksynd_rltv_rel_tbl": 8261,
+    "b_col_building_dtl": 8081,
+    "rtl_cont_entrst_inf": 5668,
+    "rtl_cont_yc_loan": 5442,
+    "b_col_trees_dtl": 4676,
+    "cust_ext_partner": 3528,
+    "ol_cc_ctr_inf": 3511,
+    "crlmt_co_agm_reply": 3427,
+    "crlmt_co_agrm_stdg_book": 3427,
+    "crlmt_prtn_crgln_aply": 3427,
+    "crlmt_prtn_crlmt_info": 3427,
+    "ol_cc_rltv_winbid_inf": 3332,
+    "rtl_cont_fix_ast_loan": 2856,
+    "ol_cc_fnc_aply": 2797,
+    "cust_lists_wtlist_inf": 2378,
+    "ol_cc_winbid_inf": 2255,
+    "ol_cc_splr_inf": 2059,
+    "b_col_othr_chtl_inf": 1905,
+    "b_col_drftbill_or_prn_or_chk_inf": 1478,
+    "ol_dt_applicant_inf": 1420,
+    "ol_cc_fnc_sup_inf": 1393,
+    "ol_cc_trdtckt_inf": 1332,
+    "ol_cc_splr_hist_inf": 1114,
+    "ocar_mrtg_loan_inf": 1028,
+    "cust_group_member": 846,
+    "ol_cc_ctr_atch_inf": 593,
+    "rtl_cont_houseuse_mrtg_loan": 346,
+    "shous_mrtg_loan_inf": 346,
+    "b_col_insurance_dtl": 248,
+    "b_col_lc_inf": 201,
+    "b_col_export_rbt_dtl": 189,
+    "cust_group": 181,
+    "b_col_lst_stock_dtl": 124,
+    "b_ap_debt_plan_asset_loan_ref": 119,
+    "b_ap_debt_plan_asset_info": 98,
+    "prj_mchn_loan_inf": 89,
+    "b_col_lgnt_grnt_inf": 88,
+    "b_col_agcpis_stkow_dtl": 51,
+    "ulm_qot_dmsn_inf": 19,
+    "ulm_qot_inf": 19,
+    "ecif_corp_cust_lst_info": 19,
+    "b_col_flight_dtl": 16,
+    "b_col_bond_dtl": 15,
+    "cust_common_stock": 13,
+    "ol_cc_ctr_py_inf": 10,
+    "b_col_fund_dtl": 9,
+    "ol_cc_chan_ancm_inf": 8,
+    "ol_llt_fnc_aply_inf": 8,
+    "b_col_precious_dtl": 5,
+    "ol_cc_ctr_py_dtl_inf": 5,
+    "b_col_fx_inf": 0,
+    "b_col_mineral_res_dtl": 0,
+    "b_col_othr_plg_inf": 0,
+    "b_col_ship_dtl": 0,
+    "b_col_valt_btno_inf": 0,
+    "b_col_valt_hs_no_inf": 0,
+    "pstloan_chk_cust_rel_inf": 0,
+    "pstloan_chk_index_summ_inf": 0,
+    "pstloan_chk_loan_inf": 0,
+    "pstloan_chk_non_loan_inf": 0,
+    "pstloan_pstins_corp_warn_rec": 0,
+    "base_regidx_data": 0,
+    "cmpn_acs_rgs": 0,
+    "cmpn_nmlst": 0,
+    "cmpn_nmlst_cst": 0,
+    "cmpn_tsk": 0,
+    "crlmt_crg_pd_lmt_aply": 0,
+    "crlmt_pre_crgln_result": 0,
+    "crlmt_sitmlmt_reply": 0,
+    "cust_corporat_bond": 0,
+    "cust_financial": 0,
+    "cust_fl_index_data": 0,
+    "ol_cc_chan_ctr_inf": 0,
+    "ol_cc_crg_inf": 0,
+    "ol_cc_splr_vln_inf": 0,
+    "ol_llt_inv_inf": 0,
+    "ol_llt_rcvb_vchr_inf": 0,
+    "ol_llt_trd_ctr_inf": 0,
+    "ol_online_apl_img_rel": 0,
+    "ol_silv_tax_aply_cltl_inf": 0,
+    "ol_silv_tax_aply_inf": 0,
+    "ol_zhdn_aply_inf": 0,
+    "rtg_aply_bsc_inf": 0,
+    "rtg_aply_bsn_inf": 0,
+    "sys_img_module_info": 0
+  },
+  "module_stats": {
+    "合同管理": {
+      "count": 3,
+      "tables": [
+        "PRVT_CTR_INF",
+        "R_RTL_CONT_SIGN_DTL",
+        "RTL_CONT_ACC_INF"
+      ]
+    },
+    "客户中心": {
+      "count": 14,
+      "tables": [
+        "ECIF_C_ADDR_INFO",
+        "ECIF_C_CERTNO_REF",
+        "ECIF_C_CORP_REL",
+        "ECIF_C_CUST_INFO",
+        "ECIF_C_CUST_REL",
+        "ECIF_C_CUSTNO_REF",
+        "ECIF_C_PHONE_INFO",
+        "ECIF_CORP_CUST_LST_INFO",
+        "ECIF_P_ADDR_INFO",
+        "ECIF_P_CERTNO_REF",
+        "ECIF_P_CUST_INFO",
+        "ECIF_P_CUST_REL",
+        "ECIF_P_CUSTNO_REF",
+        "ECIF_P_PHONE_INFO"
+      ]
+    },
+    "授信管理": {
+      "count": 6,
+      "tables": [
+        "CRLMT_CRG_PD_LMT_APLY",
+        "CRLMT_CRGLN_APLY",
+        "CRLMT_LMT_REPLY",
+        "CRLMT_LMT_REPLY_RECORD",
+        "CRLMT_SITMLMT_REPLY",
+        "CRLMT_SITMLMT_REPLY_RECORD"
+      ]
+    },
+    "放还款组": {
+      "count": 3,
+      "tables": [
+        "DSBR_ACG_PCSG_INFO",
+        "DSBR_CONT_ACC_INF",
+        "IOU_INF"
+      ]
+    },
+    "档案管理": {
+      "count": 5,
+      "tables": [
+        "ARCH_ELEC_DT",
+        "ARCH_INFO",
+        "ARCH_WH_TSK",
+        "ARCH_WH_TSK_DTL",
+        "ARCH_WH_MIDDLE"
+      ]
+    },
+    "用信管理": {
+      "count": 2,
+      "tables": [
+        "PRVT_CRLINE_USE_REPLY",
+        "R_RTL_CONT_INF"
+      ]
+    },
+    "系统管理": {
+      "count": 7,
+      "tables": [
+        "CUST_CREDIT_QUERY_APPLY",
+        "CUST_CREDIT_QUERY_OBJECT",
+        "CUST_CREDIT_QUERY_RESULT",
+        "PED_CUST_ACCUMU_FUND_QRY_APPLY",
+        "PED_CUST_ACCUMU_FUND_QRY_RESULT",
+        "SYS_LOG",
+        "SYS_LOGIN_LOG"
+      ]
+    },
+    "营销管理": {
+      "count": 29,
+      "tables": [
+        "CMPN_ACS_REAIL",
+        "CMPN_ACS_RGS",
+        "CMPN_AVY_DIG_NMLST_CST",
+        "CMPN_AVY_LBL_CST",
+        "CMPN_DLHP_DIG_NMLST_CST",
+        "CMPN_DLHP_LBL_CST",
+        "CMPN_DLHP_TRGR_EV_CST",
+        "CMPN_NMLST_CST",
+        "CMPN_TSK_CST",
+        "CMPN_TSK_MGT_DTL",
+        "CMPN_LBL_RULE_LIST_CST",
+        "CMPN_U_NCMS_WT_CUST_INDVD_DEP_FNNC_INFRM",
+        "CMPN_U_NCMS_WT_CUST_INDVD_LN_INFRM",
+        "CMPN_U_NCMS_WT_CUST_INDVD_BASE_INFRM",
+        "CMPN_U_NCMS_WT_CUST_INDVD_CHNL_INFRM",
+        "CMPN_U_NCMS_WT_CUST_INDVD_CRINV_INFRM",
+        "CMPN_U_NCMS_WT_CUST_INDVD_TXTNSCSRPVDFND",
+        "CMPN_U_NCMS_WT_CUST_INDVD_MID_INFRM",
+        "CMPN_U_NCMS_WT_CUST_INDVD_CR_INFRM",
+        "CMPN_U_NCMS_WT_LN_CTRT_BASE_INFRM_INTG",
+        "CMPN_U_NCMS_WT_CUST_CORP_BASE_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_DEP_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_LN_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_CR_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_MID_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_CHNL_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_CRINV_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_TXTNSCSR_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_FINC_INFRM"
+      ]
+    },
+    "评级管理": {
+      "count": 6,
+      "tables": [
+        "RTG_APLY_BSC_INF",
+        "RTG_APLY_BSN_INF",
+        "RTG_APLY_CNCLSN_INF",
+        "RTG_APLY_CNCLSN_INF_HIST",
+        "RTG_APLY_CPRSV_ASS_INF",
+        "RTG_APLY_RSLT_INF"
+      ]
+    },
+    "贷后管理": {
+      "count": 8,
+      "tables": [
+        "LOAN_POSTLOAN_CHK_RESULT",
+        "LOAN_RT_LABOUR_GEN_CHK",
+        "PSTLOAN_CHK_CUST_REL_INF",
+        "PSTLOAN_CHK_INDEX_SUMM_INF",
+        "PSTLOAN_CHK_LOAN_INF",
+        "PSTLOAN_CHK_NON_LOAN_INF",
+        "PSTLOAN_PSTINS_PRVT_WARN_REC",
+        "R_LOAN_FTM_CHK_TSK_TBL"
+      ]
+    },
+    "风险分类": {
+      "count": 3,
+      "tables": [
+        "RTL_RISK_ASSET_CL_INF",
+        "RTL_RISK_CL_RECORD_INF",
+        "RTL_RISK_CL_RES_INF"
+      ]
+    },
+    "额度中心": {
+      "count": 5,
+      "tables": [
+        "ULM_IOU_INF",
+        "ULM_LMT_PRIM_INF",
+        "ULM_LMT_PRIM_SNPST",
+        "ULM_LMT_RL_OCP_SUM",
+        "ULM_LMT_USE_STTN"
+      ]
+    },
+    "风控中心": {
+      "count": 2,
+      "tables": [
+        "DEAL_WITH_FILE_LOG",
+        "RULE_LOGS"
+      ]
+    }
+  },
+  "partition_key_stats": {
+    "CTRT_NO": {
+      "count": 3,
+      "tables": [
+        "PRVT_CTR_INF",
+        "R_RTL_CONT_SIGN_DTL",
+        "RTL_CONT_ACC_INF"
+      ]
+    },
+    "CUST_INTL_SEQ_NO": {
+      "count": 12,
+      "tables": [
+        "ECIF_C_ADDR_INFO",
+        "ECIF_C_CERTNO_REF",
+        "ECIF_C_CORP_REL",
+        "ECIF_C_CUST_INFO",
+        "ECIF_C_CUST_REL",
+        "ECIF_C_PHONE_INFO",
+        "ECIF_CORP_CUST_LST_INFO",
+        "ECIF_P_ADDR_INFO",
+        "ECIF_P_CERTNO_REF",
+        "ECIF_P_CUST_INFO",
+        "ECIF_P_CUST_REL",
+        "ECIF_P_PHONE_INFO"
+      ]
+    },
+    "CUST_NO": {
+      "count": 24,
+      "tables": [
+        "ECIF_C_CUSTNO_REF",
+        "ECIF_P_CUSTNO_REF",
+        "CMPN_U_NCMS_WT_CUST_INDVD_DEP_FNNC_INFRM",
+        "CMPN_U_NCMS_WT_CUST_INDVD_LN_INFRM",
+        "CMPN_U_NCMS_WT_CUST_INDVD_BASE_INFRM",
+        "CMPN_U_NCMS_WT_CUST_INDVD_CHNL_INFRM",
+        "CMPN_U_NCMS_WT_CUST_INDVD_CRINV_INFRM",
+        "CMPN_U_NCMS_WT_CUST_INDVD_TXTNSCSRPVDFND",
+        "CMPN_U_NCMS_WT_CUST_INDVD_MID_INFRM",
+        "CMPN_U_NCMS_WT_CUST_INDVD_CR_INFRM",
+        "CMPN_U_NCMS_WT_LN_CTRT_BASE_INFRM_INTG",
+        "CMPN_U_NCMS_WT_CUST_CORP_BASE_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_DEP_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_LN_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_CR_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_MID_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_CHNL_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_CRINV_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_TXTNSCSR_INFRM",
+        "CMPN_U_NCMS_WT_CUST_CORP_FINC_INFRM",
+        "R_LOAN_FTM_CHK_TSK_TBL",
+        "RTL_RISK_ASSET_CL_INF",
+        "RTL_RISK_CL_RECORD_INF",
+        "RTL_RISK_CL_RES_INF"
+      ]
+    },
+    "TENANT_ID": {
+      "count": 15,
+      "tables": [
+        "CRLMT_CRG_PD_LMT_APLY",
+        "CRLMT_CRGLN_APLY",
+        "CRLMT_LMT_REPLY",
+        "CRLMT_LMT_REPLY_RECORD",
+        "CRLMT_SITMLMT_REPLY",
+        "CRLMT_SITMLMT_REPLY_RECORD",
+        "DSBR_CONT_ACC_INF",
+        "IOU_INF",
+        "PRVT_CRLINE_USE_REPLY",
+        "R_RTL_CONT_INF",
+        "CUST_CREDIT_QUERY_APPLY",
+        "CUST_CREDIT_QUERY_OBJECT",
+        "CUST_CREDIT_QUERY_RESULT",
+        "PED_CUST_ACCUMU_FUND_QRY_APPLY",
+        "PED_CUST_ACCUMU_FUND_QRY_RESULT"
+      ]
+    },
+    "BUS_NO": {
+      "count": 7,
+      "tables": [
+        "DSBR_ACG_PCSG_INFO",
+        "RTG_APLY_BSC_INF",
+        "RTG_APLY_BSN_INF",
+        "RTG_APLY_CNCLSN_INF",
+        "RTG_APLY_CNCLSN_INF_HIST",
+        "RTG_APLY_CPRSV_ASS_INF",
+        "RTG_APLY_RSLT_INF"
+      ]
+    },
+    "ELC_MTRLS_NO": {
+      "count": 1,
+      "tables": [
+        "ARCH_ELEC_DT"
+      ]
+    },
+    "ARS_NO": {
+      "count": 1,
+      "tables": [
+        "ARCH_INFO"
+      ]
+    },
+    "ENTWRH_APLY_NO": {
+      "count": 1,
+      "tables": [
+        "ARCH_WH_TSK"
+      ]
+    },
+    "BIZ_APLY_NO": {
+      "count": 2,
+      "tables": [
+        "ARCH_WH_TSK_DTL",
+        "ARCH_WH_MIDDLE"
+      ]
+    },
+    "CREATE_TIME，3个月一个分区": {
+      "count": 2,
+      "tables": [
+        "SYS_LOG",
+        "SYS_LOGIN_LOG"
+      ]
+    },
+    "MKT_VST_TRK_NO": {
+      "count": 1,
+      "tables": [
+        "CMPN_ACS_REAIL"
+      ]
+    },
+    "MKT_VST_REG_NO": {
+      "count": 1,
+      "tables": [
+        "CMPN_ACS_RGS"
+      ]
+    },
+    "AVY_AND_TAP_TYP_RLVC_NO": {
+      "count": 1,
+      "tables": [
+        "CMPN_AVY_DIG_NMLST_CST"
+      ]
+    },
+    "AVY_AND_LBL_RLVC_NO": {
+      "count": 1,
+      "tables": [
+        "CMPN_AVY_LBL_CST"
+      ]
+    },
+    "DLHP_TAP_NMLST_NO": {
+      "count": 1,
+      "tables": [
+        "CMPN_DLHP_DIG_NMLST_CST"
+      ]
+    },
+    "DLHP_CUST_LBL_NO": {
+      "count": 1,
+      "tables": [
+        "CMPN_DLHP_LBL_CST"
+      ]
+    },
+    "DLHP_TRGR_EV_NO": {
+      "count": 1,
+      "tables": [
+        "CMPN_DLHP_TRGR_EV_CST"
+      ]
+    },
+    "MKT_NMLST_NO,ID_CRD_NO": {
+      "count": 1,
+      "tables": [
+        "CMPN_NMLST_CST"
+      ]
+    },
+    "DOC_NO": {
+      "count": 1,
+      "tables": [
+        "CMPN_TSK_CST"
+      ]
+    },
+    "MKT_TSK_NO": {
+      "count": 1,
+      "tables": [
+        "CMPN_TSK_MGT_DTL"
+      ]
+    },
+    "LBL_RULST_NO": {
+      "count": 1,
+      "tables": [
+        "CMPN_LBL_RULE_LIST_CST"
+      ]
+    },
+    "TSK_NO": {
+      "count": 7,
+      "tables": [
+        "LOAN_POSTLOAN_CHK_RESULT",
+        "LOAN_RT_LABOUR_GEN_CHK",
+        "PSTLOAN_CHK_CUST_REL_INF",
+        "PSTLOAN_CHK_INDEX_SUMM_INF",
+        "PSTLOAN_CHK_LOAN_INF",
+        "PSTLOAN_CHK_NON_LOAN_INF",
+        "PSTLOAN_PSTINS_PRVT_WARN_REC"
+      ]
+    },
+    "GTCR_CUST_NO": {
+      "count": 5,
+      "tables": [
+        "ULM_IOU_INF",
+        "ULM_LMT_PRIM_INF",
+        "ULM_LMT_PRIM_SNPST",
+        "ULM_LMT_RL_OCP_SUM",
+        "ULM_LMT_USE_STTN"
+      ]
+    },
+    "DEAL_DATE": {
+      "count": 1,
+      "tables": [
+        "DEAL_WITH_FILE_LOG"
+      ]
+    },
+    "CREATE_DATE": {
+      "count": 1,
+      "tables": [
+        "RULE_LOGS"
+      ]
+    }
+  }
+}
