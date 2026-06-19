@@ -1,0 +1,69 @@
+{
+  "skill_name": "aiguibin-api-scanner",
+  "description": "API接口扫描与文档生成技能测试用例",
+  "evals": [
+    {
+      "id": 1,
+      "name": "basic-scan",
+      "prompt": "扫描 d:\\WorkSpace\\aiguibin-common-trae\\app\\all\\src 目录下的所有接口，生成接口清单Excel文档",
+      "expected_output": "生成包含所有接口的Excel文档，包含序号、接口地址、接口描述、请求方式、接口参数、所属模块等字段",
+      "assertions": [
+        {
+          "name": "excel_file_created",
+          "description": "Excel文件是否成功创建",
+          "type": "file_exists",
+          "expected": true
+        },
+        {
+          "name": "has_required_columns",
+          "description": "Excel是否包含必需的列",
+          "type": "content_check",
+          "expected": ["序号", "接口地址", "接口描述", "请求方式", "接口参数", "所属模块"]
+        },
+        {
+          "name": "url_normalized",
+          "description": "是否处理了缺少开头/的URL",
+          "type": "content_check",
+          "expected": "是否规范化URL"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "url-normalization",
+      "prompt": "从项目中提取所有API接口，特别注意处理URL缺少开头/的情况，输出完整的接口清单",
+      "expected_output": "所有缺少开头/的URL都被规范化添加了/前缀，并在Excel中标记",
+      "assertions": [
+        {
+          "name": "normalized_urls_marked",
+          "description": "规范化URL是否被正确标记",
+          "type": "content_check",
+          "expected": "是(已添加/前缀)"
+        },
+        {
+          "name": "all_urls_start_with_slash",
+          "description": "所有接口地址是否以/开头",
+          "type": "pattern_check",
+          "expected": "^/"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "deduplication",
+      "prompt": "扫描项目中的所有接口定义，去重后输出接口清单",
+      "expected_output": "输出的接口清单中不存在重复的接口地址",
+      "assertions": [
+        {
+          "name": "no_duplicate_urls",
+          "description": "接口地址是否已去重",
+          "type": "unique_check",
+          "expected": true
+        }
+      ],
+      "files": []
+    }
+  ]
+}
